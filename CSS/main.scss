@@ -1,0 +1,195 @@
+@import url('layout/fonts.css');
+
+.wrapper {
+  background-image: url('../pictures/bg.jpg');
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+}
+.wrapper::before {
+  position: absolute;
+  content:" ";
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  display: block;
+  z-index:-1;
+  background-image: url('../pictures/texture.jpg');
+  opacity: 0.3;
+}
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 88px;
+  width: 100%;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 940px;
+  height: 100%;
+  margin: 0 auto;
+}
+.logobox {
+  display: flex;
+  width: 100px;
+  height: 75px;
+}
+.logobox__pic {
+  background-image: url('../pictures/icons/logo.svg');
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+}
+
+.menu__list {
+  width: 670px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+ul.menu__list {
+  color: #ffffff;
+  list-style-type: disc; 
+  list-style-position: outside;
+}
+.menu__list-item {
+  align-items: center;
+  margin-left: 30px;
+}
+.menu__item:first-child {
+  margin-left: 0px;
+}
+
+.menu__link {
+  font-family:'ubunturegular';
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 13px;
+  letter-spacing: 1.2;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+ul.menu__list {
+  color: #ffffff;
+  list-style-type: disc; 
+  list-style-position: outside;
+}
+.menu__list-item:first-child {
+  list-style-type: none;
+}
+.button {
+  background: #e45028;
+  width: 97px;
+  height: 35px;
+  border-radius: 3px;
+  padding: 10px 12px 17px;
+  font-family: 'ubuntumedium';
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1.1px;
+  color: white;
+  border: 0; 
+  margin-left: 12px;
+  cursor: pointer;
+}
+.banner {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 90px;
+}
+.container_banner {
+  align-items: flex-start;
+  margin-right: 12px;
+  align-items: center;
+}
+.banner-img {
+  display: flex;
+  flex-direction: row;
+}
+.banner-img__drops {
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  margin-left: -410px;
+  margin-top: 74px;
+}
+.banner-img__burger {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.banner-text{
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 0 12px;
+  z-index: 3;
+  padding-top: 70px;
+}
+.title {
+  font-family: 'gagalinregular';
+  color: #f9b43b;
+  text-transform: uppercase;
+  font-size: 68px;
+  letter-spacing: 1.8px;
+  margin:0 0 45px;
+}
+.title__info {
+  font-family: 'lifehackmedium';
+  color: white;
+  font-size: 58px;
+  margin: 0;
+}
+.pagination {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto 0 0;
+  width: 20px;
+  height: 180px;
+  justify-content: space-around;
+  cursor: pointer;
+}
+.radio__label {
+  display: flex;
+  position: relative;
+}
+
+.radio__input{
+  position: absolute;
+  top: 0;
+  left: -9999px;
+}
+
+ .radio__input-fake {
+  display: flex;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: white;
+  
+}
+
+.transition {
+  display: flex;
+  align-self: center;
+  width: 34px;
+  height: 17px;
+}
+.transition__link {
+  width: 100%;
+  height: 100%;
+  background-image: url('../pictures/icons/arrow-scroll.svg');
+  background-repeat: no-repeat;
+}
