@@ -5,10 +5,10 @@
   background-size: cover;
   display: flex;
   flex-direction: column;
-  position: absolute;
+  position: relative;
   overflow: hidden;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   z-index: -2;
 }
 .wrapper::before {
@@ -191,5 +191,142 @@ ul.menu__list {
   width: 100%;
   height: 100%;
   background-image: url('../pictures/icons/arrow-scroll.svg');
+  background-repeat: no-repeat;
+}
+
+
+.wrapper-pluses {
+  background-image: url('../pictures/bgone.jpg');
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+  padding-top: 135px;
+}
+.container_column {
+  flex-direction: column;
+}
+.title_pluses {
+  color: black;
+  margin-bottom: 55px;
+}
+.pluses {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.pluse {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+}
+.pluse__pic {
+  width: 100px;
+  height: 92px;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-bottom: 30px;
+}
+.pluse__pic_meat {
+  
+  background-image: url('../pictures/icons/meat.svg');
+}
+.pluse__pic_hand {
+  background-image: url('../pictures/icons/hand.svg');
+}
+.pluse__pic_natural {
+  background-image: url('../pictures/icons/natural.svg');
+}
+.pluse__info {
+  text-align: center;
+}
+.title__info_pluse {
+  font-size: 24px;
+  color: black;
+  margin-bottom: 20px;
+}
+
+.pluse__desc {
+  font-family: 'ubuntulight';
+  font-size: 13px;
+  color: #848382;
+  line-height: 1.8;
+  margin:0;
+  
+}
+
+.wrapper-reviews {
+  display: flex;
+  margin: 0;
+  align-items: center;
+  flex-flow: row wrap;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  filter: grayscale(80%);
+}
+.reviews-avatar {
+  margin: 0;
+  width: 274px;
+  height: 325px;
+  background-repeat: no-repeat;
+  background-position: center;
+  
+}
+.reviews-avatar_one {
+  background-image: url('../pictures/photo-one.jpg');
+}
+.reviews-avatar_two {
+  background-image: url('../pictures/photo-two.jpg');
+}
+.reviews-avatar_three {
+  background-image: url('../pictures/photo-three.jpg');
+}
+.reviews-avatar_four {
+  background-image: url('../pictures/photo-four.jpg');
+}
+.reviews-avatar_five {
+  background-image: url('../pictures/photo-five.jpg');
+}
+.reviews-avatar_six {
+  background-image: url('../pictures/photo-six.jpg');
+}
+.reviews-avatar_seven {
+  background-image: url('../pictures/photo-seven.jpg');
+}
+.reviews-avatar_eight {
+  background-image: url('../pictures/photo-eight.jpg');
+}
+.reviews-avatar__info {
+  padding-top: 50px;
+  text-align: left;
+  color: white;
+  font-size: 14px;
+}
+.reviews-avatar__name {
+  font-family: 'gagalinregular';
+  margin: 0 0 25px 10px;
+  
+}
+.reviews-avatar__text {
+  font-family: 'ubuntulight';
+  margin-left: 10px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+.button_reviews-avatar {
+  margin-left: 10px;
+  width: 110px;
+  background: #2f3234;
+}
+.button_reviews-avatar:hover {
+  overflow: hidden;
+  background: #1f2122;
   background-repeat: no-repeat;
 }
