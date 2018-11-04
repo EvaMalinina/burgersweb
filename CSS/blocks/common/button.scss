@@ -1,0 +1,30 @@
+$orange: #e45028;
+$yellow: #f9b43b;
+$black: #2f3234;
+$red: #e35028;
+
+
+.button {
+  padding: 10px 15px;
+  background: $red;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  display: inline-block;
+  font-family: 'ubuntumedium';
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1.1px;
+  cursor: pointer;
+  margin-left: 15px;
+
+  &_bg-black {
+    border: none;
+   background: #1f2122;
+   margin-left: 0px;
+  } 
+}
+.button_bg-black:hover {
+  background: $black;
+}
+

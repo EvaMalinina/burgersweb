@@ -1,0 +1,23 @@
+{
+  "name": "burgersweb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "sass": "^1.14.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EvaMalinina/burgersweb.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EvaMalinina/burgersweb/issues"
+  },
+  "homepage": "https://github.com/EvaMalinina/burgersweb#readme"
+}

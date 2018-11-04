@@ -1,0 +1,129 @@
+.welcome {
+  background-image: url('../pictures/bg.jpg');
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  z-index: -2;
+}
+.welcome::before {
+  position: absolute;
+  content:" ";
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  display: block;
+  z-index:-1;
+  background: url('../pictures/texture.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.3;
+}
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 88px;
+  width: 100%;
+  padding-top: 12px;
+}
+
+.header__buttons {
+  display: flex;
+  align-items: center;
+}
+.welcome__container {
+  flex: 1;
+}
+
+.welcome__content {
+  flex: .75;
+  display: flex;
+  align-items: center;
+  
+}
+.menu__list {
+  display: flex;
+  flex-direction: row;
+  
+}
+.menu__link {
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  font-family:'ubuntumedium';
+  text-decoration: none;
+  font-size: 13px;
+  letter-spacing: 1.1;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  &:after {
+    content: "";
+    display: block;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: #fff;   
+    margin: 0 16px;
+  }
+}
+
+.menu__item {
+  &:last-child {
+    .menu__link:after {
+      display: none;
+    }
+  }
+}
+
+.welcome__picture {
+  display: flex;
+  align-items: flex-start;
+  width: 50%;
+  margin-right: 15px;
+}
+.welcome__burger-img {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.welcome__drops-img {
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  margin-left: -478px;
+  margin-top: 74px;
+}
+
+.welcome__text {
+  margin-top: 60px;
+  width: 50%;
+}
+.welcome__desc{
+  font-family: 'lifehackmedium';
+  color: white;
+  font-size: 58px;
+}
+
+
+
+.to-next-section {
+  display: flex;
+  align-self: center;
+  margin-bottom: 60px;
+  cursor: pointer;
+}
+.arrow-down {
+  width: 100%;
+  height: 100%;
+}
+
+
