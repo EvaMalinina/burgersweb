@@ -7,7 +7,7 @@
   overflow: hidden;
   width: 100%;
   height: 100vh;
-  z-index: -2;
+  z-index: 1;
 }
 .welcome::before {
   position: absolute;
@@ -17,7 +17,7 @@
   width:100%;
   height:100%;
   display: block;
-  z-index:-1;
+  z-index:0;
   background: url('../pictures/texture.jpg');
   background-repeat: no-repeat;
   background-size: cover;
@@ -25,7 +25,6 @@
 }
 .header {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   min-height: 88px;
@@ -39,6 +38,7 @@
 }
 .welcome__container {
   flex: 1;
+  flex-direction: column;
 }
 
 .welcome__content {
@@ -90,27 +90,24 @@
   margin-right: 15px;
 }
 .welcome__burger-img {
-  width: 100%;
-  height: 100%;
-  z-index: 1;
+  position: relative;
+  margin-left: 34px;
 }
 
 .welcome__drops-img {
-  width: 100%;
-  height: 100%;
-  z-index: 2;
-  margin-left: -478px;
-  margin-top: 74px;
+  position: absolute;
+  top: 158px;
 }
 
 .welcome__text {
-  margin-top: 60px;
+  padding-top: 60px;
   width: 50%;
 }
 .welcome__desc{
   font-family: 'lifehackmedium';
   color: white;
   font-size: 58px;
+  line-height: 60px;
 }
 
 

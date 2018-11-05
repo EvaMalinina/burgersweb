@@ -10,7 +10,6 @@ $red: #e35028;
   color: #fff;
   text-decoration: none;
   border-radius: 5px;
-  display: inline-block;
   font-family: 'ubuntumedium';
   font-size: 13px;
   text-transform: uppercase;
@@ -18,11 +17,18 @@ $red: #e35028;
   cursor: pointer;
   margin-left: 15px;
 
+  &:hover{
+    background: #c1401e;
+  }
+
   &_bg-black {
     border: none;
-   background: #1f2122;
-   margin-left: 0px;
+    background: #1f2122;
+   
   } 
+  &_mg-0 {
+    margin-left: 0px;
+  }
 }
 .button_bg-black:hover {
   background: $black;

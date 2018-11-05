@@ -5,15 +5,13 @@ background-size: cover;
 }
 .best__list {
   display: flex;
+  justify-content: space-between;
 }
 
 .best__item {
-  margin-right: 20px;
+  width: 300px;
   text-align: center;
 
-  &:last-child {
-    margin-right: 0;
-  }
 }
 .best__img {
   min-height: 100px;

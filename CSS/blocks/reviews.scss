@@ -11,7 +11,7 @@
   background-position: center center;
   background-repeat: no-repeat;
   filter: grayscale(100%);  
-  position: relative;
+  
 
   &:hover {
     .reviews__hover {
@@ -21,21 +21,19 @@
 }
 
 .reviews__hover {
-  
-  padding-top: 50px;
-  padding-left: 10px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  padding: 0px 19px;
   background: rgba(#454545, .7);
   opacity: 0;
-  transition: opacity .3s;
+  transition:  1s;
 }
 .reviews__text {
   font-family: 'ubuntulight';
-  line-height: 1.6;
+  font-size: 14px;
+  line-height: 24px;
   margin-bottom: 20px;
   color: white;
 }
