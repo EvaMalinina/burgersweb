@@ -1,0 +1,59 @@
+.team {
+  background-image: url('../pictures/team.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.team__info {
+  position: absolute;
+  height: 100%;
+  background-image: url('../pictures/team-bg.png');
+  right: 0;
+  padding: 110px 90px 140px;
+}
+.team__member {
+  margin-bottom: 40px;
+
+  &_active {
+
+  }
+}
+.team__member-data {
+  display: flex;
+  justify-content: space-between;
+  height: 0;
+  overflow: hidden;
+
+  &_active {
+    height: 100%;
+  }
+  
+}
+.team__member-photo {
+  width: 30%;
+  height: 30%;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-top: 20px;
+}
+.team__icon {
+  min-width: 100%;
+  min-height: 100%;
+  display: flex;
+  
+}
+.team__member-desc {
+  font-size: 14px;
+  line-height: 24px;
+  color: white;
+  margin-top: 20px;
+  line-height: 24px;
+}
+.team__position {
+  font-family: 'ubuntubold';
+  margin-bottom: 5px;
+
+}
+.team__text {
+  font-family: 'ubuntulight';
+}

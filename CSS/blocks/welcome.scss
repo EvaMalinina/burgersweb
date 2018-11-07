@@ -1,6 +1,6 @@
 
 .welcome {
-  background-image: url('../pictures/texture.jpg');
+  background-image: url('../pictures/texture.png');
   
   background-size: cover;
   display: flex;
@@ -9,7 +9,6 @@
   overflow: hidden;
   width: 100%;
   height: 100vh;
-  z-index: 1;
 }
 .welcome__video {
   position: absolute;
@@ -28,6 +27,10 @@
   min-height: 88px;
   width: 100%;
   padding-top: 12px;
+}
+.logo-icon {
+  width: 98.265px;
+  height:74.317px;
 }
 
 .header__buttons {
