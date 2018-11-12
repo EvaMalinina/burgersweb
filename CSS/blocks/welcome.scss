@@ -1,4 +1,3 @@
-
 .welcome {
   background-image: url('../pictures/texture.png');
   
@@ -24,22 +23,50 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  min-height: 88px;
+  min-height: rem(88px);
   width: 100%;
-  padding-top: 12px;
+  padding-top: rem(12px);
 }
 .logo-icon {
-  width: 98.265px;
-  height:74.317px;
+  width: rem(98.265px);
+  height:rem(74.317px);
 }
 
 .header__buttons {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+}
+
+.humburger {
+  width: rem(25px);
+  cursor: pointer;
+  margin-left: rem(30px);
+  margin-right: rem(20px);
+  margin-top: rem(5px);
+  display: none;
+
+  @include tablets {
+    display: flex;
+    flex-direction: column;
+  }
+  
+
+  &__item {
+    height: rem(4px);
+    margin-bottom: rem(5px);
+    border-radius: rem(4px);
+    background-color: #fff;
+  }
+ 
 }
 .welcome__container {
   flex: 1;
+  display: flex;
   flex-direction: column;
+  justify-content: center;
+
+  
 }
 
 .welcome__content {
@@ -47,68 +74,131 @@
   display: flex;
   align-items: center;
   
+
+  @include tablets {
+    flex-direction: column;
+    flex: 0.9;
+    height: 100%;
+    padding: 0 17%;
+  }
+  
+  
 }
 .menu__list {
   display: flex;
   flex-direction: row;
+
+  @include tablets {
+    display: none;
+  }
   
 }
 .menu__link {
   color: #fff;
   text-decoration: none;
-  display: flex;
-  align-items: center;
   font-family:'ubuntumedium';
-  text-decoration: none;
-  font-size: 13px;
+  font-size: rem(13px);
   letter-spacing: 1.1;
   text-transform: uppercase;
   cursor: pointer;
-
-  &:after {
-    content: "";
-    display: block;
-    width: 4px;
-    height: 4px;
-    border-radius: 50%;
-    background: #fff;   
-    margin: 0 16px;
-  }
+  
 }
 
 .menu__item {
-  &:last-child {
-    .menu__link:after {
-      display: none;
+  display: flex; 
+  align-items: center;
+  &:after {
+    content: "";
+    display: block;
+    width: rem(4px);
+    height: rem(4px);
+    border-radius: 50%;
+    background: #fff;   
+    margin: 0 rem(15px);
     }
-  }
+  &:last-child::after{
+    display: none;
+    }
+ 
+  
 }
 
 .welcome__picture {
   display: flex;
   align-items: flex-start;
   width: 50%;
-  margin-right: 15px;
+  margin-right: rem(15px);
+  position: relative;
+
+  @include tablets {
+    width: 100%;
+    margin-right: 0;
+    height:65%;
+  }
 }
 .welcome__burger-img {
-  position: relative;
-  margin-left: 34px;
+  
+  margin-left: rem(34px);
+
+  @include tablets {
+    margin-left: 0rem;
+    display: flex;
+    height: 100%;
+    position: absolute;
+    left: rem(52px);
+  }
+  @include phones {
+    height: 100%;
+    width: 100%;
+    left: rem(5px);
+  }
 }
 
 .welcome__drops-img {
   position: absolute;
-  top: 158px;
+  top: rem(50px);
+
+  @include tablets{
+    display: flex;
+    top: rem(34px);
+    left: rem(-4px);
+  }
+  @include phones {
+    top: 70px;
+    width: 110%;
+    height: 50%;
+    left: -18px;
+}
 }
 
+
 .welcome__text {
-  padding-top: 60px;
+  padding-top: rem(60px);
   width: 50%;
+
+  @include tablets {
+    width: 100%;
+    padding-top: rem(20px);
+    text-align: center;
+    height: 35%;
+  }
 }
 .welcome__desc{
   font-family: 'lifehackmedium';
   color: white;
-  font-size: 58px;
-  line-height: 60px;
+  font-size: rem(58px);
+  line-height: rem(60px);
+
+  @include tablets {
+    font-size: rem(53px);
+    text-align: center;
+  }
+  @include phones {
+    font-size: rem(53px);
+    width: 100%;
+    text-align: center;
+  }
+
 }
 
 
@@ -116,8 +206,15 @@
 .to-next-section {
   display: flex;
   align-self: center;
-  margin-bottom: 60px;
+  margin-bottom: rem(60px);
   cursor: pointer;
+
+  @include tablets {
+    margin-bottom: 35px;
+  }
+  @include phones {
+    margin-bottom: 30px;
+  }
 }
 .arrow-down {
   width: 100%;

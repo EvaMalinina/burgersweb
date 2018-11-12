@@ -1,0 +1,97 @@
+.contacts {
+background: url('../pictures/map.jpg') center center no-repeat;
+background-size: cover;
+position: relative;
+}
+
+.contacts-map {
+  width: rem(46px);
+  height: rem(57.727px);
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  background-color: #0f0f0f;
+  width: 100%;
+  display: flex;
+  align-content: center;
+
+  @include phones {
+    padding: rem(20px) 0;
+  }
+  
+}
+.contacts-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  @include phones {
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+  }
+}
+.contacts-info {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @include phones {
+    width: 100%;
+    align-items: center;
+    margin-bottom: rem(15px);
+  }
+}
+.contacts-info__text {
+  font-family: 'ubuntulight';
+  color: white;
+  font-size: rem(14px);
+}
+.contacts-info__phone {
+  display: flex;
+  align-items: baseline;
+  cursor: pointer;
+}
+.contacts-info__icon {
+  width: rem(11px);
+  height: rem(11px);
+}
+.contacts-info__number {
+  font-family: 'ubuntubold';
+  color: #e45028;
+  margin-left: rem(7px);
+}
+.contacts-socials {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+
+  @include phones {
+    width: 100%;
+    justify-content: center;
+  }
+}
+.contacts-item {
+  margin-left: rem(20px);
+
+  &:first-child {
+    @include phones {
+      margin-left: rem(0px);
+    }
+  }
+}
+.contacts-link {
+  cursor: pointer;
+}
+.contacts-icon {
+  width: rem(20px);
+  height: rem(20px);
+  fill: #585858;
+
+  &:hover {
+    fill: white;
+  }
+}

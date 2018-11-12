@@ -1,0 +1,73 @@
+.bigmenu {
+  background-image: url('../pictures/bg-menu.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+
+  &__name {
+    position: absolute;
+    top:rem(110px);
+    left:rem(45px);
+  }
+
+  &__pages {
+    position: absolute;
+    top:0;
+    right: 0;
+    display: flex;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+  }
+
+  &__page {
+    display: flex;
+    &:hover {
+      .bigmenu__trigger span{
+        color: $yellow;
+      }
+      .bigmenu__wrap {
+        width: rem(540px);
+      }
+    }
+  }
+
+  &__wrap {
+    width: 0;
+    overflow: hidden;
+    transition: 0.6s;
+  }
+
+  &__trigger {
+    display: flex;
+    align-items: flex-end;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    max-width: rem(80px);
+    padding-bottom: rem(45px);
+    text-decoration: none;
+    span {
+      display: flex;
+      font-size: rem(40px);
+      font-family: 'gagalinregular';
+      color: white;
+      transform: rotate(-90deg);
+      white-space: nowrap;
+      width: 100%; 
+    }
+  }
+
+  &__desc {
+    background-color: rgba(#2f3234, 0.93);
+    height: 100%;
+    padding: rem(62px) rem(37px) rem(62px) rem(33px);
+    line-height: rem(24px);
+    min-width: rem(540px);
+    color: white;
+
+    @include phones {
+      min-width: rem(240px);
+    }
+  }
+}

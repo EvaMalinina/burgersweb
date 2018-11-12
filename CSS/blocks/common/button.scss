@@ -5,17 +5,19 @@ $red: #e35028;
 
 
 .button {
-  padding: 10px 15px;
+  padding: rem(10px) rem(15px);
   background: $red;
   color: #fff;
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: rem(5px);
+  border-color: transparent;
   font-family: 'ubuntumedium';
-  font-size: 13px;
+  font-size: rem(13px);
   text-transform: uppercase;
-  letter-spacing: 1.1px;
+  letter-spacing: rem(1.1px);
   cursor: pointer;
-  margin-left: 15px;
+  margin-left: rem(15px);
+
 
   &:hover{
     background: #c1401e;
@@ -24,13 +26,16 @@ $red: #e35028;
   &_bg-black {
     border: none;
     background: #1f2122;
+
+    &:hover {
+      background: #44474a;
+    }
    
   } 
   &_mg-0 {
-    margin-left: 0px;
+    margin-left: rem(0px);  
   }
+
 }
-.button_bg-black:hover {
-  background: $black;
-}
+
 

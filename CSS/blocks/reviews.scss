@@ -12,6 +12,10 @@
   background-repeat: no-repeat;
   filter: grayscale(100%);  
   
+  @include tablets {
+    width:50%;
+    height: 25%;
+  }
 
   &:hover {
     .reviews__hover {
@@ -25,15 +29,30 @@
   flex-direction: column;
   justify-content: center;
   height: 100%;
-  padding: 0px 19px;
+  padding: rem(0px) rem(19px) 0;
   background: rgba(#454545, .7);
   opacity: 0;
   transition:  1s;
+
+  @include tablets {
+    padding: rem(30px) rem(50px);
+    align-items: center;
+  }
 }
 .reviews__text {
   font-family: 'ubuntulight';
-  font-size: 14px;
-  line-height: 24px;
-  margin-bottom: 20px;
+  font-size: rem(14px);
+  line-height: rem(24px);
+  margin-bottom: rem(20px);
   color: white;
+
+  @include tablets{
+    text-align: center;
+    font-size: rem(12px);
+    margin-bottom: rem(10px);
+  }
+  @include phones {
+    height: 0;
+    opacity: 0;
+  }
 }

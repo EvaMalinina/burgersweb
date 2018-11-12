@@ -9,51 +9,125 @@
   height: 100%;
   background-image: url('../pictures/team-bg.png');
   right: 0;
-  padding: 110px 90px 140px;
-}
-.team__member {
-  margin-bottom: 40px;
+  top: 0;
+  padding: rem(110px) rem(90px) 0;
+  width: 50%;
 
-  &_active {
-
+  @include tablets {
+    width: 100%;
+    text-align: center;
+    padding: rem(220px) rem(210px) 0;
+  }
+  @include phones {
+    padding: rem(150px) rem(60px) 0 rem(68px);
   }
 }
-.team__member-data {
+.team__desc {
+  @include tablets {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+ 
+}
+.team-acco {
   display: flex;
-  justify-content: space-between;
-  height: 0;
-  overflow: hidden;
+  flex-direction: column;
+  align-items: flex-start;
 
-  &_active {
-    height: 100%;
+  @include tablets {
+    align-items: center;
+    width: 100%;
+  }
+  &__member {
+  margin-bottom: rem(40px);
+
+  @include tablets {
+    width: 100%;
+  }
+
+    &:hover {
+      .title-name_team-acco {
+        color: $yellow;
+        &::before {
+          transform: rotate(-180deg);
+        }
+      }
+      .team-acco__wrap {
+        height: 100%;
+      }
+    }
+  } 
+  &__wrap {
+    height: 0;
+    overflow: hidden;
+    transition: 0.5s;
+  }
+}
+.title-name_team-acco {
+  margin-bottom: rem(20px);
+
+  @include tablets {
+    font-size: rem(24px);
+  }
+  &::before {
+    content: "";
+    display: block;
+    border: rem(4px) solid transparent;
+    border-top: rem(5px) solid $yellow;
+    position: absolute;
+    top: rem(11px);
+    left: rem(-17px);
+    transition: 0.5s;
+  }
+}
+
+.team-acco__member-data {
+  display: flex;
+  margin-top: rem(20px);
+
+  @include tablets {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
   }
   
 }
-.team__member-photo {
-  width: 30%;
-  height: 30%;
+.team-acco__member-photo {
+  width: rem(100px);
+  height: rem(100px);
   overflow: hidden;
   border-radius: 50%;
-  margin-top: 20px;
+
+  @include tablets {
+    margin-bottom: rem(20px);
+  }
 }
-.team__icon {
-  min-width: 100%;
-  min-height: 100%;
+.team-acco__icon {
+  width: 100%;
+  height: 100%;
   display: flex;
   
 }
-.team__member-desc {
-  font-size: 14px;
-  line-height: 24px;
+.team-acco__member-desc {
+  font-size: rem(14px);
+  line-height: rem(24px);
   color: white;
-  margin-top: 20px;
-  line-height: 24px;
-}
-.team__position {
-  font-family: 'ubuntubold';
-  margin-bottom: 5px;
-
-}
-.team__text {
+  margin-left: rem(20px);
+  line-height: rem(24px);
+  max-width: rem(210px);
   font-family: 'ubuntulight';
+
+  @include tablets {
+    margin-left: 0;
+    min-width: 100%;
+  }
+  @include phones{
+    min-width: 90%;
+  }
+}
+.team-acco__position {
+  font-family: 'ubuntubold';
+  margin-bottom: rem(5px);
 }

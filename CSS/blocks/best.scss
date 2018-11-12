@@ -2,40 +2,67 @@
 background: url('../pictures/bgone.jpg') center center no-repeat;
 background-size: cover;
   
+  @include tablets {
+    background: url('../pictures/bgone-tablets.jpg') center center no-repeat;
+  }
+  @include phones {
+    background: url('../pictures/bgone-phones.jpg') center center no-repeat;
+  }
 }
 .best__list {
   display: flex;
   justify-content: space-between;
+
+  @include phones {
+    flex-direction: column;
+  }
 }
 
 .best__item {
-  width: 300px;
+  width: rem(300px);
   text-align: center;
+
+  @include phones {
+    display: flex;
+    width:100%;
+    text-align: left;
+    margin-bottom: rem(50px);
+  }
 
 }
 .best__img {
-  min-height: 100px;
+  min-height: rem(100px);
   display: flex;
   justify-content: center;
-  margin-bottom: 25px;
+  margin-bottom: rem(25px);
+
+  @include phones {
+    width: 20%;
+  }
 }
 .best__icon-meat {
-  width: 96.428px; 
-  height: 89.246px;
+  width: rem(96.428px); 
+  height: rem(89.246px);
 }
 .best__icon-hand {
-  width: 73px;
-  height: 85.875px;
+  width: rem(73px);
+  height: rem(85.875px);
 }
 .best__icon-natural {
-  width: 88px;
-  height: 75.534px;
+  width: rem(88px);
+  height: rem(75.534px);
+}
+.best__desc {
+  @include phones {
+    margin-left: 23px;
+    width:75%
+  }
 }
 .best__title {
   font-family: 'lifehackmedium';
-  font-size: 24px;
+  font-size: rem(24px);
   color: black;
-  margin-bottom: 20px;
+  margin-bottom: rem(20px);
 }
 
 .best__text {
@@ -44,7 +71,7 @@ background-size: cover;
 }
 .best__words {
   font-family: 'ubuntulight';
-  font-size: 12px;
+  font-size: rem(12px);
   color: #6c6c6d;
   line-height: 1.8;
   margin:0;
