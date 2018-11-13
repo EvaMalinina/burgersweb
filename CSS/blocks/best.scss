@@ -4,9 +4,11 @@ background-size: cover;
   
   @include tablets {
     background: url('../pictures/bgone-tablets.jpg') center center no-repeat;
+    background-size: cover;
   }
   @include phones {
     background: url('../pictures/bgone-phones.jpg') center center no-repeat;
+    background-size: cover;
   }
 }
 .best__list {

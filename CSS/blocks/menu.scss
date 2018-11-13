@@ -28,6 +28,10 @@
       }
       .bigmenu__wrap {
         width: rem(540px);
+
+        @include phones {
+          width: rem(350px);
+        }
       }
     }
   }
@@ -67,7 +71,7 @@
     color: white;
 
     @include phones {
-      min-width: rem(240px);
+      min-width: rem(350px);
     }
   }
 }

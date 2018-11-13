@@ -15,11 +15,11 @@
 
   @include tablets {
     width:100%;
-    margin-left: 0;
-    padding: rem(0px) rem(148px);
+    margin-right: 0;
+    padding: rem(0px) rem(128px);
   }
   @include phones {
-    padding: rem(0px) rem(10px);
+    padding: rem(0px) rem(0px);
   }
 
   &:last-child {
@@ -33,18 +33,21 @@
 .form__input {
   border: none;
   border-radius: rem(5px);
-  padding: rem(5px);
+  padding: rem(7px);
   width: 100%;
+  
+
+  &:hover {
+    border: $yellow 2px;
+  }
 }
 
 .form__row {
   display: flex;
   margin-bottom: rem(20px);
 
-  &_button {
-    @include phones {
-      margin-left: rem(137px); 
-    }
+  @include phones {
+    justify-content: center;
   }
 }
 
@@ -128,10 +131,6 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-
-  @include phones {
-    margin-left: rem(158px);
-  }
 }
 
 .checkbox__label input {
@@ -148,8 +147,10 @@
   height: rem(15px);
   width: rem(15px);
   background-color: white;
+  display: flex;
   justify-content: center;
   align-items: center;
+  
 
   &::before {
     content: '';
@@ -157,21 +158,18 @@
     display: block;
     opacity: 0;
     background: url("../pictures/checkbox-mark.png");
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
   }
 }
 .checkbox__label:hover input ~ .checkbox__input-fake {
+
   background-color: #ccc;
 }
 
 .checkbox__input:checked + .checkbox__input-fake::before {
-  max-width: 100%;
-  max-height: 100%;
-  padding: rem(2px);
-  opacity: 100%;
+  opacity: 1;
 }
-.radio__controls {
-  @include phones {
-    margin-top: rem(40px);
-    margin-left: rem(82px);
-  }
-}
+

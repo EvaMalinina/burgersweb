@@ -9,8 +9,12 @@
   line-height: rem(64px); 
 
   @include tablets {
-    font-size: rem(63px);
-    margin-bottom: rem(15px);
+    font-size: rem(68px);
+    margin-bottom: rem(18px);
+  }
+  @include phones {
+    font-size: rem(64px);
+    margin-bottom: rem(10px);
   }
 
   &_color_black {

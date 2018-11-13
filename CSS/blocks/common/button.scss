@@ -17,7 +17,7 @@ $red: #e35028;
   letter-spacing: rem(1.1px);
   cursor: pointer;
   margin-left: rem(15px);
-
+  outline: none;
 
   &:hover{
     background: #c1401e;
@@ -32,10 +32,31 @@ $red: #e35028;
     }
    
   } 
+
+  &_no-hover {
+    border: none;
+    background: #1f2122;
+  }
+  
   &_mg-0 {
     margin-left: rem(0px);  
   }
 
 }
 
-
+.buttonfirst {
+  @include phones {
+    opacity: 0;
+    height: 0;
+  }
+}
+.buttonsecond {
+  opacity: 0;
+  height: 0%;
+  
+  @include phones {
+    opacity: 1;
+    height: 100%;
+    
+  }
+}

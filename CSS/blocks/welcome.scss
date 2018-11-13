@@ -53,7 +53,7 @@
   
 
   &__item {
-    height: rem(4px);
+    height: 4px;
     margin-bottom: rem(5px);
     border-radius: rem(4px);
     background-color: #fff;
@@ -77,9 +77,15 @@
 
   @include tablets {
     flex-direction: column;
-    flex: 0.9;
+    justify-content: center;
     height: 100%;
     padding: 0 17%;
+    flex:0.8;
+  }
+
+  @include phones {
+    flex:0.9;
+    padding: 0 12%;
   }
   
   
@@ -125,49 +131,48 @@
 
 .welcome__picture {
   display: flex;
-  align-items: flex-start;
+  justify-content: center;
   width: 50%;
   margin-right: rem(15px);
   position: relative;
 
   @include tablets {
+    align-items: center;
+    flex: 1;
     width: 100%;
     margin-right: 0;
-    height:65%;
-  }
-}
-.welcome__burger-img {
-  
-  margin-left: rem(34px);
-
-  @include tablets {
-    margin-left: 0rem;
-    display: flex;
-    height: 100%;
-    position: absolute;
-    left: rem(52px);
+    min-height: rem(430px);
   }
   @include phones {
-    height: 100%;
-    width: 100%;
-    left: rem(5px);
+    min-height: rem(240px);
+  }
+ }
+
+.welcome__burger-img {
+  
+
+  @include tablets {
+    margin-left: rem(0px);
+    width: 80%;
+  }
+  @include phones {
+    
   }
 }
 
 .welcome__drops-img {
   position: absolute;
-  top: rem(50px);
+  top: 16%;
+  left:-1%;
 
   @include tablets{
-    display: flex;
-    top: rem(34px);
-    left: rem(-4px);
+    top: 16%;
+    left: 1%;
+    max-width: 100%;
   }
   @include phones {
-    top: 70px;
-    width: 110%;
-    height: 50%;
-    left: -18px;
+    max-width: 90%;
+    position: absolute;
 }
 }
 
@@ -178,9 +183,10 @@
 
   @include tablets {
     width: 100%;
-    padding-top: rem(20px);
+    padding-top: rem(25px);
     text-align: center;
-    height: 35%;
+    flex: 1;
+    
   }
 }
 .welcome__desc{
@@ -190,13 +196,12 @@
   line-height: rem(60px);
 
   @include tablets {
-    font-size: rem(53px);
+    font-size: rem(58px);
     text-align: center;
   }
   @include phones {
-    font-size: rem(53px);
-    width: 100%;
-    text-align: center;
+    // font-size: rem(52px);
+    
   }
 
 }

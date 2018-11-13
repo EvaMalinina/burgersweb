@@ -548,6 +548,7 @@ p {
   letter-spacing: 0.06875rem;
   cursor: pointer;
   margin-left: 0.9375rem;
+  outline: none;
 }
 .button:hover {
   background: #c1401e;
@@ -559,8 +560,30 @@ p {
 .button_bg-black:hover {
   background: #44474a;
 }
+.button_no-hover {
+  border: none;
+  background: #1f2122;
+}
 .button_mg-0 {
   margin-left: 0rem;
+}
+
+@media screen and (max-width: 480px) {
+  .buttonfirst {
+    opacity: 0;
+    height: 0;
+  }
+}
+
+.buttonsecond {
+  opacity: 0;
+  height: 0%;
+}
+@media screen and (max-width: 480px) {
+  .buttonsecond {
+    opacity: 1;
+    height: 100%;
+  }
 }
 
 .fixed-menu {
@@ -622,8 +645,14 @@ p {
 }
 @media screen and (max-width: 768px) {
   .section-title {
-    font-size: 3.9375rem;
-    margin-bottom: 0.9375rem;
+    font-size: 4.25rem;
+    margin-bottom: 1.125rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .section-title {
+    font-size: 4rem;
+    margin-bottom: 0.625rem;
   }
 }
 .section-title_color_black {
@@ -713,7 +742,7 @@ p {
   }
 }
 .humburger__item {
-  height: 0.25rem;
+  height: 4px;
   margin-bottom: 0.3125rem;
   border-radius: 0.25rem;
   background-color: #fff;
@@ -734,9 +763,16 @@ p {
 @media screen and (max-width: 768px) {
   .welcome__content {
     flex-direction: column;
-    flex: 0.9;
+    justify-content: center;
     height: 100%;
     padding: 0 17%;
+    flex: 0.8;
+  }
+}
+@media screen and (max-width: 480px) {
+  .welcome__content {
+    flex: 0.9;
+    padding: 0 12%;
   }
 }
 
@@ -779,56 +815,48 @@ p {
 
 .welcome__picture {
   display: flex;
-  align-items: flex-start;
+  justify-content: center;
   width: 50%;
   margin-right: 0.9375rem;
   position: relative;
 }
 @media screen and (max-width: 768px) {
   .welcome__picture {
+    align-items: center;
+    flex: 1;
     width: 100%;
     margin-right: 0;
-    height: 65%;
+    min-height: 26.875rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .welcome__picture {
+    min-height: 15rem;
   }
 }
 
-.welcome__burger-img {
-  margin-left: 2.125rem;
-}
 @media screen and (max-width: 768px) {
   .welcome__burger-img {
     margin-left: 0rem;
-    display: flex;
-    height: 100%;
-    position: absolute;
-    left: 3.25rem;
+    width: 80%;
   }
 }
-@media screen and (max-width: 480px) {
-  .welcome__burger-img {
-    height: 100%;
-    width: 100%;
-    left: 0.3125rem;
-  }
-}
-
 .welcome__drops-img {
   position: absolute;
-  top: 3.125rem;
+  top: 16%;
+  left: -1%;
 }
 @media screen and (max-width: 768px) {
   .welcome__drops-img {
-    display: flex;
-    top: 2.125rem;
-    left: -0.25rem;
+    top: 16%;
+    left: 1%;
+    max-width: 100%;
   }
 }
 @media screen and (max-width: 480px) {
   .welcome__drops-img {
-    top: 70px;
-    width: 110%;
-    height: 50%;
-    left: -18px;
+    max-width: 90%;
+    position: absolute;
   }
 }
 
@@ -839,9 +867,9 @@ p {
 @media screen and (max-width: 768px) {
   .welcome__text {
     width: 100%;
-    padding-top: 1.25rem;
+    padding-top: 1.5625rem;
     text-align: center;
-    height: 35%;
+    flex: 1;
   }
 }
 
@@ -853,18 +881,10 @@ p {
 }
 @media screen and (max-width: 768px) {
   .welcome__desc {
-    font-size: 3.3125rem;
+    font-size: 3.625rem;
     text-align: center;
   }
 }
-@media screen and (max-width: 480px) {
-  .welcome__desc {
-    font-size: 3.3125rem;
-    width: 100%;
-    text-align: center;
-  }
-}
-
 .to-next-section {
   display: flex;
   align-self: center;
@@ -894,11 +914,13 @@ p {
 @media screen and (max-width: 768px) {
   .best {
     background: url("../pictures/bgone-tablets.jpg") center center no-repeat;
+    background-size: cover;
   }
 }
 @media screen and (max-width: 480px) {
   .best {
     background: url("../pictures/bgone-phones.jpg") center center no-repeat;
+    background-size: cover;
   }
 }
 
@@ -987,7 +1009,7 @@ p {
   background-image: url("../pictures/team-bg.png");
   right: 0;
   top: 0;
-  padding: 6.875rem 5.625rem 0;
+  padding: 6.875rem 0 0 5.625rem;
   width: 50%;
 }
 @media screen and (max-width: 768px) {
@@ -1060,14 +1082,13 @@ p {
   border: 0.25rem solid transparent;
   border-top: 0.3125rem solid #f9b43b;
   position: absolute;
-  top: 0.6875rem;
+  top: 0.375rem;
   left: -1.0625rem;
   transition: 0.5s;
 }
 
 .team-acco__member-data {
   display: flex;
-  margin-top: 1.25rem;
 }
 @media screen and (max-width: 768px) {
   .team-acco__member-data {
@@ -1150,6 +1171,11 @@ p {
 .bigmenu__page:hover .bigmenu__wrap {
   width: 33.75rem;
 }
+@media screen and (max-width: 480px) {
+  .bigmenu__page:hover .bigmenu__wrap {
+    width: 21.875rem;
+  }
+}
 .bigmenu__wrap {
   width: 0;
   overflow: hidden;
@@ -1184,7 +1210,7 @@ p {
 }
 @media screen and (max-width: 480px) {
   .bigmenu__desc {
-    min-width: 15rem;
+    min-width: 21.875rem;
   }
 }
 
@@ -1271,13 +1297,13 @@ p {
 @media screen and (max-width: 768px) {
   .form {
     width: 100%;
-    margin-left: 0;
-    padding: 0rem 9.25rem;
+    margin-right: 0;
+    padding: 0rem 8rem;
   }
 }
 @media screen and (max-width: 480px) {
   .form {
-    padding: 0rem 0.625rem;
+    padding: 0rem 0rem;
   }
 }
 .form:last-child {
@@ -1291,8 +1317,11 @@ p {
 .form__input {
   border: none;
   border-radius: 0.3125rem;
-  padding: 0.3125rem;
+  padding: 0.4375rem;
   width: 100%;
+}
+.form__input:hover {
+  border: #f9b43b 2px;
 }
 
 .form__row {
@@ -1300,8 +1329,8 @@ p {
   margin-bottom: 1.25rem;
 }
 @media screen and (max-width: 480px) {
-  .form__row_button {
-    margin-left: 8.5625rem;
+  .form__row {
+    justify-content: center;
   }
 }
 
@@ -1384,11 +1413,6 @@ p {
   -ms-user-select: none;
   user-select: none;
 }
-@media screen and (max-width: 480px) {
-  .checkbox__label {
-    margin-left: 9.875rem;
-  }
-}
 
 .checkbox__label input {
   position: absolute;
@@ -1404,6 +1428,7 @@ p {
   height: 0.9375rem;
   width: 0.9375rem;
   background-color: white;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
@@ -1413,6 +1438,10 @@ p {
   display: block;
   opacity: 0;
   background: url("../pictures/checkbox-mark.png");
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
 }
 
 .checkbox__label:hover input ~ .checkbox__input-fake {
@@ -1420,17 +1449,7 @@ p {
 }
 
 .checkbox__input:checked + .checkbox__input-fake::before {
-  max-width: 100%;
-  max-height: 100%;
-  padding: 0.125rem;
-  opacity: 100%;
-}
-
-@media screen and (max-width: 480px) {
-  .radio__controls {
-    margin-top: 2.5rem;
-    margin-left: 5.125rem;
-  }
+  opacity: 1;
 }
 
 .contacts {
@@ -1451,6 +1470,7 @@ p {
   width: 100%;
   display: flex;
   align-content: center;
+  padding: 0.625rem 0rem;
 }
 @media screen and (max-width: 480px) {
   .footer {
@@ -1473,7 +1493,6 @@ p {
 }
 
 .contacts-info {
-  width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -1510,7 +1529,6 @@ p {
 }
 
 .contacts-socials {
-  width: 50%;
   display: flex;
   justify-content: flex-end;
 }
@@ -1524,13 +1542,12 @@ p {
 .contacts-item {
   margin-left: 1.25rem;
 }
-@media screen and (max-width: 480px) {
-  .contacts-item:first-child {
-    margin-left: 0rem;
-  }
+.contacts-item:first-child {
+  margin-left: 0rem;
 }
 
 .contacts-link {
+  display: flex;
   cursor: pointer;
 }
 
