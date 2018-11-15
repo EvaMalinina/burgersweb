@@ -472,7 +472,7 @@ body {
 
 .container {
   margin: 0 auto;
-  width: 100%;
+  width: 95%;
   max-width: 58.75rem;
   height: 100%;
   position: relative;
@@ -549,20 +549,22 @@ p {
   cursor: pointer;
   margin-left: 0.9375rem;
   outline: none;
+  border: none;
 }
 .button:hover {
   background: #c1401e;
 }
 .button_bg-black {
-  border: none;
   background: #1f2122;
 }
 .button_bg-black:hover {
   background: #44474a;
 }
-.button_no-hover {
-  border: none;
-  background: #1f2122;
+.button_transparent {
+  background: transparent;
+}
+.button_transparent:hover {
+  background: transparent;
 }
 .button_mg-0 {
   margin-left: 0rem;
@@ -570,19 +572,16 @@ p {
 
 @media screen and (max-width: 480px) {
   .buttonfirst {
-    opacity: 0;
-    height: 0;
+    display: none;
   }
 }
 
 .buttonsecond {
-  opacity: 0;
-  height: 0%;
+  display: none;
 }
 @media screen and (max-width: 480px) {
   .buttonsecond {
-    opacity: 1;
-    height: 100%;
+    display: block;
   }
 }
 
@@ -772,7 +771,7 @@ p {
 @media screen and (max-width: 480px) {
   .welcome__content {
     flex: 0.9;
-    padding: 0 12%;
+    padding: 0;
   }
 }
 
@@ -823,15 +822,8 @@ p {
 @media screen and (max-width: 768px) {
   .welcome__picture {
     align-items: center;
-    flex: 1;
     width: 100%;
     margin-right: 0;
-    min-height: 26.875rem;
-  }
-}
-@media screen and (max-width: 480px) {
-  .welcome__picture {
-    min-height: 15rem;
   }
 }
 
@@ -841,6 +833,12 @@ p {
     width: 80%;
   }
 }
+@media screen and (max-width: 480px) {
+  .welcome__burger-img {
+    width: 65%;
+  }
+}
+
 .welcome__drops-img {
   position: absolute;
   top: 16%;
@@ -849,13 +847,15 @@ p {
 @media screen and (max-width: 768px) {
   .welcome__drops-img {
     top: 16%;
-    left: 1%;
-    max-width: 100%;
+    left: 3%;
+    max-width: 90%;
   }
 }
 @media screen and (max-width: 480px) {
   .welcome__drops-img {
-    max-width: 90%;
+    top: 14%;
+    left: 13%;
+    max-width: 70%;
     position: absolute;
   }
 }
@@ -869,7 +869,6 @@ p {
     width: 100%;
     padding-top: 1.5625rem;
     text-align: center;
-    flex: 1;
   }
 }
 
@@ -885,6 +884,7 @@ p {
     text-align: center;
   }
 }
+
 .to-next-section {
   display: flex;
   align-self: center;
@@ -1069,6 +1069,7 @@ p {
 }
 
 .title-name_team-acco {
+  display: flex;
   margin-bottom: 1.25rem;
 }
 @media screen and (max-width: 768px) {
@@ -1243,15 +1244,20 @@ p {
   flex-direction: column;
   justify-content: center;
   height: 100%;
-  padding: 0rem 1.1875rem 0;
+  padding: 0 9%;
   background: rgba(69, 69, 69, 0.7);
   opacity: 0;
   transition: 1s;
 }
 @media screen and (max-width: 768px) {
   .reviews__hover {
-    padding: 1.875rem 3.125rem;
+    padding: 0 10%;
     align-items: center;
+  }
+}
+@media screen and (max-width: 480px) {
+  .reviews__hover {
+    padding: 0 16%;
   }
 }
 
@@ -1315,13 +1321,15 @@ p {
 }
 
 .form__input {
-  border: none;
+  border: 1px solid transparent;
   border-radius: 0.3125rem;
   padding: 0.4375rem;
   width: 100%;
+  outline: none;
+  box-sizing: border-box;
 }
-.form__input:hover {
-  border: #f9b43b 2px;
+.form__input:focus {
+  border-color: #f9b43b;
 }
 
 .form__row {
@@ -1528,35 +1536,35 @@ p {
   margin-left: 0.4375rem;
 }
 
-.contacts-socials {
+.socials {
   display: flex;
   justify-content: flex-end;
 }
 @media screen and (max-width: 480px) {
-  .contacts-socials {
+  .socials {
     width: 100%;
     justify-content: center;
   }
 }
 
-.contacts-item {
+.socials__item {
   margin-left: 1.25rem;
 }
-.contacts-item:first-child {
+.socials__item:first-child {
   margin-left: 0rem;
 }
 
-.contacts-link {
+.socials__link {
   display: flex;
   cursor: pointer;
 }
 
-.contacts-icon {
+.socials__icon {
   width: 1.25rem;
   height: 1.25rem;
   fill: #585858;
 }
-.contacts-icon:hover {
+.socials__icon:hover {
   fill: white;
 }
 

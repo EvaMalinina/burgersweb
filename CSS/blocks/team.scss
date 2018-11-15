@@ -66,6 +66,7 @@
   }
 }
 .title-name_team-acco {
+  display: flex;
   margin-bottom: rem(20px);
 
   @include tablets {

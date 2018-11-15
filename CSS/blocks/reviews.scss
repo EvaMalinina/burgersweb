@@ -29,14 +29,17 @@
   flex-direction: column;
   justify-content: center;
   height: 100%;
-  padding: rem(0px) rem(19px) 0;
+  padding: 0 9%;
   background: rgba(#454545, .7);
   opacity: 0;
   transition:  1s;
 
   @include tablets {
-    padding: rem(30px) rem(50px);
+    padding: 0 10%;
     align-items: center;
+  }
+  @include phones {
+    padding: 0 16%;
   }
 }
 .reviews__text {

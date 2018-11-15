@@ -18,13 +18,13 @@ $red: #e35028;
   cursor: pointer;
   margin-left: rem(15px);
   outline: none;
+  border: none;
 
   &:hover{
     background: #c1401e;
   }
 
   &_bg-black {
-    border: none;
     background: #1f2122;
 
     &:hover {
@@ -33,9 +33,11 @@ $red: #e35028;
    
   } 
 
-  &_no-hover {
-    border: none;
-    background: #1f2122;
+  &_transparent {
+    background: transparent;
+    &:hover {
+      background: transparent;
+    }
   }
   
   &_mg-0 {
@@ -46,17 +48,14 @@ $red: #e35028;
 
 .buttonfirst {
   @include phones {
-    opacity: 0;
-    height: 0;
+    display: none;
   }
 }
 .buttonsecond {
-  opacity: 0;
-  height: 0%;
+  display: none;
   
   @include phones {
-    opacity: 1;
-    height: 100%;
+    display: block;
     
   }
 }

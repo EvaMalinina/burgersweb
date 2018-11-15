@@ -65,7 +65,7 @@ position: relative;
   color: #e45028;
   margin-left: rem(7px);
 }
-.contacts-socials {
+.socials {
   
   display: flex;
   justify-content: flex-end;
@@ -75,18 +75,18 @@ position: relative;
     justify-content: center;
   }
 }
-.contacts-item {
+.socials__item {
   margin-left: rem(20px);
 
   &:first-child {
      margin-left: rem(0px);
   }
 }
-.contacts-link {
+.socials__link {
   display: flex;
   cursor: pointer;
 }
-.contacts-icon {
+.socials__icon {
   width: rem(20px);
   height: rem(20px);
   fill: #585858;

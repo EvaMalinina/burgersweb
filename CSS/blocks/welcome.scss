@@ -85,7 +85,7 @@
 
   @include phones {
     flex:0.9;
-    padding: 0 12%;
+    padding: 0;
   }
   
   
@@ -138,25 +138,20 @@
 
   @include tablets {
     align-items: center;
-    flex: 1;
     width: 100%;
     margin-right: 0;
-    min-height: rem(430px);
   }
-  @include phones {
-    min-height: rem(240px);
-  }
+  
  }
 
 .welcome__burger-img {
-  
 
   @include tablets {
     margin-left: rem(0px);
     width: 80%;
   }
   @include phones {
-    
+    width: 65%;
   }
 }
 
@@ -167,11 +162,13 @@
 
   @include tablets{
     top: 16%;
-    left: 1%;
-    max-width: 100%;
+    left: 3%;
+    max-width: 90%;
   }
   @include phones {
-    max-width: 90%;
+    top: 14%;
+    left: 13%;
+    max-width: 70%;
     position: absolute;
 }
 }
@@ -185,8 +182,6 @@
     width: 100%;
     padding-top: rem(25px);
     text-align: center;
-    flex: 1;
-    
   }
 }
 .welcome__desc{
@@ -198,10 +193,6 @@
   @include tablets {
     font-size: rem(58px);
     text-align: center;
-  }
-  @include phones {
-    // font-size: rem(52px);
-    
   }
 
 }

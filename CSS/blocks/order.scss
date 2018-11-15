@@ -31,14 +31,15 @@
 }
 
 .form__input {
-  border: none;
+  border: 1px solid transparent;
   border-radius: rem(5px);
   padding: rem(7px);
   width: 100%;
-  
+  outline: none;
+  box-sizing: border-box;
 
-  &:hover {
-    border: $yellow 2px;
+  &:focus {
+    border-color: $yellow;
   }
 }
 
