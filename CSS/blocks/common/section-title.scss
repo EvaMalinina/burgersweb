@@ -31,6 +31,27 @@
   &_position_center {
     text-align: center;
   }
+  &_color_red {
+    color: $red;
+  }
+  &_fs14 {
+    font-size: rem(14px);
+    
+  }
+  &_fs36 {
+    font-size: rem(36px);
+  }
+  
+  &_lh0 {
+    line-height: 0;
+  }
+  &_kkal {
+    font-size: rem(18px);
+    line-height: 1.8;
+    margin-top: -70%;
+    color: #f9d19d;
+    text-transform: none;
+  }
 
 }
 

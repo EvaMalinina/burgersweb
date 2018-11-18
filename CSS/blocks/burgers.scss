@@ -1,0 +1,132 @@
+.burgers {
+  position: relative;
+  background: rgb(249,180,59);
+  background: linear-gradient(0deg, rgba(249,180,59,1) 0%, rgba(235,140,56,1) 50%, rgba(249,180,59,1) 100%);
+}
+.to-prev-burger {
+  
+  margin-left: rem(40px);
+}
+.to-next-burger {
+ 
+  margin-right: rem(40px);
+}
+.burgers-info {
+  display: flex;
+}
+.burgers-pic {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.burgers-pic__item {
+  
+}
+.burgers-pic__consist {
+  position: absolute;
+  top: 0;
+  left:0;
+  background: #f08c33;
+  height: rem(90px);
+  width: rem(90px);
+  border-radius: rem(4px);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+  &:hover {
+    background: $red;
+    cursor: pointer;
+    .burgers-pic__drop {
+      right: rem(-265px);
+    }
+  }
+}
+.burgers-pic__drop {
+  background: url('../pictures/bg-drop.png');
+  border-radius: rem(4px);
+  padding: rem(20px);
+  position: absolute;
+  top: 0;
+  right: -9999px;
+
+
+  .burgers__list {
+    display: flex;
+    flex-direction: column;
+  }
+  .burgers__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: rem(10px);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .beef-icon {
+    width: rem(44px);
+    height: rem(39.212px);
+  }
+  
+  .buns-icon {
+    max-width: rem(48px);
+    max-height: rem(30.317px);
+  }
+  .salad-icon {
+    width: rem(38px);
+    height: rem(38.638px);
+  }
+  .sauce-icon {
+    width: rem(40.189px);
+    height: rem(43.416px);
+  }
+  .cucumber-icon {
+    width: rem(42px);
+    height: rem(37.754px);
+    
+  }
+  .cheese-icon {
+    width: rem(38.126px);
+    height: rem(34.138px);
+  }
+
+  .burgers__item-text {
+    display: flex;
+    justify-content: space-between;
+    margin-left: rem(10px);
+    width: rem(160px);
+    font-family: 'ubuntulight';
+    font-size: rem(14px);
+    
+  }
+  .burgers__item-name {
+    font-family: 'ubuntumedium';
+  }
+
+}
+.burgers-pic__kkal {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: rem(80px);
+  width: rem(60px);
+}
+.burgers-desc {
+  display: flex;
+  flex-direction: column;
+}
+.burgers-desc__text {
+  font-family: 'ubuntulight';
+  font-size: rem(14px);
+  color: white;
+  line-height: 1.8;
+  margin-bottom: rem(35px);
+}
+.burges-desc__price {
+  display: flex;
+  align-items: baseline;
+}

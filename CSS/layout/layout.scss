@@ -59,6 +59,10 @@ body {
   @include tablets {
     width: 95%;
   }
+  &_without-align {
+    flex-direction: row;
+    align-items: center;
+  }
 }
 .wrapper {
   position: relative;
