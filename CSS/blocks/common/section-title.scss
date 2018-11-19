@@ -23,6 +23,13 @@
 
   &_mb55 {
     margin-bottom: rem(55px);
+
+    @include tablets{
+      margin-bottom: rem(35px);
+    }
+    @include phones {
+      margin-bottom: rem(25px);
+    }
   }
 
   &_color_white {
@@ -51,6 +58,13 @@
     margin-top: -70%;
     color: #f9d19d;
     text-transform: none;
+
+    @include tablets{
+      margin-left: rem(10px);
+      }
+    @include phones{
+    margin-left: rem(15px);
+    }
   }
 
 }
