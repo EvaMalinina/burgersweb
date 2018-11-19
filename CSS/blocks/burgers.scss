@@ -9,7 +9,8 @@
     margin-left: rem(30px); 
   }
   @include phones {
-    margin-left: 0;
+    margin-left: -200px;
+    position: absolute;
   }
 }
 .to-next-burger {
@@ -19,7 +20,8 @@
     margin-right: rem(30px); 
   }
   @include phones {
-    margin-right: 0;
+    margin-left: 200px;
+    position: absolute;
   }
 }
 .burgers-info {
@@ -69,19 +71,22 @@
 
   @include tablets{
     top: rem(-70px);
+    left: rem(24px);
   }
   @include phones{
-    top: rem(-100px);
+    top: rem(-70px);
+    left: rem(14px);
   }
 
   &:hover {
     background: $red;
     cursor: pointer;
     .burgers-pic__drop {
-      right: rem(-265px);
+      right: rem(-256px);
+      z-index: 3;
 
       @include tablets {
-        right: rem(-289px);
+        right: -303px; //если вставить rem выпадашка сьезжает при сжимании
       }
       
     }
@@ -101,12 +106,18 @@
   .burgers__list {
     display: flex;
     flex-direction: column;
+
+    
   }
   .burgers__item {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-bottom: rem(10px);
+
+    @include tablets {
+      width: rem(235px);
+    }
 
     &:last-child {
       margin-bottom: 0;
@@ -155,12 +166,12 @@
   .dagger {
     width: rem(20px);
     cursor: pointer;
-    margin-left: rem(30px);
     display: none;
   
     @include tablets {
       display: flex;
       flex-direction: column;
+      margin-left: rem(30px);
     }
     @include phones {
       margin-left: rem(75px);
@@ -178,10 +189,17 @@
       }
 
       &:nth-child(1) {
-        transform: rotate(45deg) translateY(13px);
+        transform: rotate(45deg) translateY(12px);
+
+        @include phones {
+          transform: rotate(45deg) translateY(11px);
+        }
       }
       &:nth-child(2) {
         transform: rotate(-45deg) translateY(-12px);
+        @include phones {
+          transform: rotate(-45deg) translateY(-11px);
+        }
       }
     }
    
@@ -197,11 +215,12 @@
 
   @include tablets {
     top: rem(-70px);
-    right: 0;
+    right: rem(37px);
     left: auto;
   }
   @include phones{
-    top: rem(-100px);
+   
+    right: rem(28px);
   }
 }
 .burgers-desc {
@@ -211,7 +230,7 @@
   @include tablets{
     text-align: center;
     align-items: center;
-    padding: 0 rem(45px);
+    padding: 0 10%;
   }
 }
 .burgers-desc__text {

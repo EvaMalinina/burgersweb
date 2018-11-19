@@ -1115,7 +1115,8 @@ p {
 }
 @media screen and (max-width: 480px) {
   .to-prev-burger {
-    margin-left: 0;
+    margin-left: -200px;
+    position: absolute;
   }
 }
 
@@ -1129,7 +1130,8 @@ p {
 }
 @media screen and (max-width: 480px) {
   .to-next-burger {
-    margin-right: 0;
+    margin-left: 200px;
+    position: absolute;
   }
 }
 
@@ -1140,6 +1142,7 @@ p {
   .burgers-info {
     flex-direction: column;
     align-items: center;
+    flex: 1;
   }
 }
 
@@ -1183,11 +1186,13 @@ p {
 @media screen and (max-width: 768px) {
   .burgers-pic__consist {
     top: -4.375rem;
+    left: 1.5rem;
   }
 }
 @media screen and (max-width: 480px) {
   .burgers-pic__consist {
-    top: -6.25rem;
+    top: -4.375rem;
+    left: 0.875rem;
   }
 }
 .burgers-pic__consist:hover {
@@ -1195,11 +1200,12 @@ p {
   cursor: pointer;
 }
 .burgers-pic__consist:hover .burgers-pic__drop {
-  right: -16.5625rem;
+  right: -16rem;
+  z-index: 3;
 }
 @media screen and (max-width: 768px) {
   .burgers-pic__consist:hover .burgers-pic__drop {
-    right: -18.0625rem;
+    right: -303px;
   }
 }
 
@@ -1221,6 +1227,11 @@ p {
   align-items: center;
   justify-content: space-between;
   margin-bottom: 0.625rem;
+}
+@media screen and (max-width: 768px) {
+  .burgers-pic__drop .burgers__item {
+    width: 14.6875rem;
+  }
 }
 .burgers-pic__drop .burgers__item:last-child {
   margin-bottom: 0;
@@ -1263,13 +1274,13 @@ p {
 .burgers-pic__drop .dagger {
   width: 1.25rem;
   cursor: pointer;
-  margin-left: 1.875rem;
   display: none;
 }
 @media screen and (max-width: 768px) {
   .burgers-pic__drop .dagger {
     display: flex;
     flex-direction: column;
+    margin-left: 1.875rem;
   }
 }
 @media screen and (max-width: 480px) {
@@ -1287,10 +1298,20 @@ p {
   margin-bottom: 0;
 }
 .burgers-pic__drop .dagger__item:nth-child(1) {
-  transform: rotate(45deg) translateY(0.75rem);
+  transform: rotate(45deg) translateY(12px);
+}
+@media screen and (max-width: 480px) {
+  .burgers-pic__drop .dagger__item:nth-child(1) {
+    transform: rotate(45deg) translateY(11px);
+  }
 }
 .burgers-pic__drop .dagger__item:nth-child(2) {
-  transform: rotate(-45deg) translateY(-0.75rem);
+  transform: rotate(-45deg) translateY(-12px);
+}
+@media screen and (max-width: 480px) {
+  .burgers-pic__drop .dagger__item:nth-child(2) {
+    transform: rotate(-45deg) translateY(-11px);
+  }
 }
 
 .burgers-pic__kkal {
@@ -1303,13 +1324,13 @@ p {
 @media screen and (max-width: 768px) {
   .burgers-pic__kkal {
     top: -4.375rem;
-    right: 0;
+    right: 2.3125rem;
     left: auto;
   }
 }
 @media screen and (max-width: 480px) {
   .burgers-pic__kkal {
-    top: -6.25rem;
+    right: 1.75rem;
   }
 }
 
@@ -1321,7 +1342,7 @@ p {
   .burgers-desc {
     text-align: center;
     align-items: center;
-    padding: 0 2.8125rem;
+    padding: 0 10%;
   }
 }
 
