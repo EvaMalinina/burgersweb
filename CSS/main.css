@@ -671,7 +671,7 @@ p {
 }
 @media screen and (max-width: 480px) {
   .section-title_mb55 {
-    margin-bottom: 1.5625rem;
+    margin-bottom: 0.9375rem;
   }
 }
 .section-title_color_white {
@@ -688,6 +688,12 @@ p {
 }
 .section-title_fs36 {
   font-size: 2.25rem;
+}
+@media screen and (max-width: 480px) {
+  .section-title_burger {
+    font-size: 3.125rem;
+    line-height: 1.1;
+  }
 }
 .section-title_lh0 {
   line-height: 0;
@@ -1154,7 +1160,7 @@ p {
 }
 @media screen and (max-width: 768px) {
   .burgers-pic {
-    margin-bottom: 1.875rem;
+    margin-bottom: 1.5625rem;
   }
 }
 
@@ -1343,6 +1349,11 @@ p {
     text-align: center;
     align-items: center;
     padding: 0 10%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .burgers-desc {
+    padding: 0 12%;
   }
 }
 

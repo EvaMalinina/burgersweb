@@ -28,7 +28,7 @@
       margin-bottom: rem(35px);
     }
     @include phones {
-      margin-bottom: rem(25px);
+      margin-bottom: rem(15px);
     }
   }
 
@@ -47,6 +47,12 @@
   }
   &_fs36 {
     font-size: rem(36px);
+  }
+  &_burger {
+    @include phones{
+    font-size: rem(50px);
+    line-height: 1.1;
+    }
   }
   
   &_lh0 {

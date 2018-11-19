@@ -42,7 +42,7 @@
   position: relative;
 
   @include tablets {
-    margin-bottom: rem(30px);
+    margin-bottom: rem(25px);
   }
   
 }
@@ -231,6 +231,9 @@
     text-align: center;
     align-items: center;
     padding: 0 10%;
+  }
+  @include phones {
+    padding: 0 12%;
   }
 }
 .burgers-desc__text {
