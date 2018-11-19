@@ -1287,10 +1287,10 @@ p {
   margin-bottom: 0;
 }
 .burgers-pic__drop .dagger__item:nth-child(1) {
-  transform: rotate(45deg) translateY(12px);
+  transform: rotate(45deg) translateY(0.75rem);
 }
 .burgers-pic__drop .dagger__item:nth-child(2) {
-  transform: rotate(-45deg) translateY(-12px);
+  transform: rotate(-45deg) translateY(-0.75rem);
 }
 
 .burgers-pic__kkal {
