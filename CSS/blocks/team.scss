@@ -51,7 +51,7 @@
     align-items: center;
   }
 
-    &:hover {
+    &:active {
       .title-name_team-acco {
         color: $yellow;
         &::before {
@@ -60,13 +60,14 @@
       }
       .team-acco__wrap {
         height: 100%;
+        
       }
     }
   } 
   &__wrap {
     height: 0;
     overflow: hidden;
-    transition: 0.5s;
+    // transition: 2s;
   }
 }
 .title-name_team-acco {

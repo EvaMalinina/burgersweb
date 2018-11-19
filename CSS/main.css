@@ -1188,6 +1188,7 @@ p {
   align-items: center;
   flex-direction: column;
   justify-content: space-evenly;
+  cursor: pointer;
 }
 @media screen and (max-width: 768px) {
   .burgers-pic__consist {
@@ -1201,16 +1202,16 @@ p {
     left: 0.875rem;
   }
 }
-.burgers-pic__consist:hover {
+.burgers-pic__consist:active {
   background: #e35028;
   cursor: pointer;
 }
-.burgers-pic__consist:hover .burgers-pic__drop {
+.burgers-pic__consist:active .burgers-pic__drop {
   right: -16rem;
   z-index: 3;
 }
 @media screen and (max-width: 768px) {
-  .burgers-pic__consist:hover .burgers-pic__drop {
+  .burgers-pic__consist:active .burgers-pic__drop {
     right: -303px;
   }
 }
@@ -1430,19 +1431,18 @@ p {
     align-items: center;
   }
 }
-.team-acco__member:hover .title-name_team-acco {
+.team-acco__member:active .title-name_team-acco {
   color: #f9b43b;
 }
-.team-acco__member:hover .title-name_team-acco::before {
+.team-acco__member:active .title-name_team-acco::before {
   transform: rotate(-180deg);
 }
-.team-acco__member:hover .team-acco__wrap {
+.team-acco__member:active .team-acco__wrap {
   height: 100%;
 }
 .team-acco__wrap {
   height: 0;
   overflow: hidden;
-  transition: 0.5s;
 }
 
 .title-name_team-acco {
@@ -1553,15 +1553,27 @@ p {
 .bigmenu__page {
   display: flex;
 }
-.bigmenu__page:hover .bigmenu__trigger span {
+.bigmenu__page:active {
+  min-width: 100%;
+}
+.bigmenu__page:active .bigmenu__trigger span {
   color: #f9b43b;
 }
-.bigmenu__page:hover .bigmenu__wrap {
-  width: 33.75rem;
+.bigmenu__page:active .bigmenu__wrap {
+  width: 100%;
 }
 @media screen and (max-width: 480px) {
-  .bigmenu__page:hover .bigmenu__wrap {
-    width: 21.875rem;
+  .bigmenu__page:active .bigmenu__wrap {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .bigmenu__page:active .cross {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 30px;
+    right: 30px;
   }
 }
 .bigmenu__wrap {
@@ -1593,13 +1605,27 @@ p {
   height: 100%;
   padding: 3.875rem 2.3125rem 3.875rem 2.0625rem;
   line-height: 1.5rem;
-  min-width: 33.75rem;
   color: white;
 }
-@media screen and (max-width: 480px) {
-  .bigmenu__desc {
-    min-width: 21.875rem;
-  }
+.cross {
+  width: 1.25rem;
+  cursor: pointer;
+  display: none;
+}
+.cross__item {
+  height: 4px;
+  margin-bottom: 0.875rem;
+  border-radius: 0.25rem;
+  background-color: #c1c2c2;
+}
+.cross__item:last-child {
+  margin-bottom: 0;
+}
+.cross__item:nth-child(1) {
+  transform: rotate(45deg) translateY(11px);
+}
+.cross__item:nth-child(2) {
+  transform: rotate(-45deg) translateY(-11px);
 }
 
 .reviews__list {
