@@ -10,8 +10,8 @@ var title = document.getElementsByClassName('team-acco__member'),
 for (var i=0; i<title.length; i++) {
     title[i].addEventListener('click', function() {
       if (!(this.classList.contains('active'))) {
-        for (var i=0; i<title.length; i++) {
-          title[i].classList.remove('active');
+        for (var j=0; j<title.length; j++) {
+          title[j].classList.remove('active');
         }
         this.classList.add('active');
       }

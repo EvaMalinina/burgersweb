@@ -21,7 +21,7 @@
 
 .header {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
   min-height: rem(88px);
   width: 100%;
@@ -78,14 +78,16 @@
       font-size: rem(24px);
       line-height: rem(40px);
     }
+    .logo-icon {
+      display: flex;
+      position: fixed;
+      top: rem(12px);
+      left: rem(20px);
+      z-index: 100;
+    }
   }
 }
-.logo {
-  position: fixed;
-  top: rem(10px);
-  left: rem(20px);
-  z-index: 100;
-}
+
 .logo-icon {
   width: rem(98.265px);
   height:rem(74.317px);

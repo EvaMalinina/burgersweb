@@ -757,7 +757,7 @@ p {
 
 .header {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   min-height: 5.5rem;
   width: 100%;
@@ -808,10 +808,10 @@ p {
   font-size: 1.5rem;
   line-height: 2.5rem;
 }
-.header_fullmenu .logo-icon {
-  display: flex;
+
+.logo {
   position: fixed;
-  top: 0.75rem;
+  top: 0.625rem;
   left: 1.25rem;
   z-index: 100;
 }
@@ -1121,9 +1121,8 @@ p {
 }
 @media screen and (max-width: 480px) {
   .to-prev-burger {
-    right: -2.1875rem;
-    position: relative;
-    margin-left: 0;
+    margin-left: -200px;
+    position: absolute;
   }
 }
 
@@ -1137,9 +1136,8 @@ p {
 }
 @media screen and (max-width: 480px) {
   .to-next-burger {
-    left: -2.1875rem;
-    position: relative;
-    margin-right: 0;
+    margin-left: 200px;
+    position: absolute;
   }
 }
 
@@ -1163,10 +1161,6 @@ p {
 @media screen and (max-width: 768px) {
   .burgers-pic {
     margin-bottom: 1.5625rem;
-  }
-}
-@media screen and (max-width: 480px) {
-  .burgers-pic {
     padding-top: 3.4375rem;
   }
 }
@@ -1205,8 +1199,8 @@ p {
 }
 @media screen and (max-width: 480px) {
   .burgers-pic__consist {
-    top: -1.5625rem;
-    left: 1.25rem;
+    top: -4.375rem;
+    left: 0.875rem;
   }
 }
 .burgers-pic__consist:active {
@@ -1344,8 +1338,7 @@ p {
 }
 @media screen and (max-width: 480px) {
   .burgers-pic__kkal {
-    top: -1.5625rem;
-    right: 1.875rem;
+    right: 1.75rem;
   }
 }
 
@@ -2125,4 +2118,4 @@ p {
   background-repeat: no-repeat;
 }*/
 
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=mian.css.map */

@@ -9,8 +9,9 @@
     margin-left: rem(30px); 
   }
   @include phones {
-    margin-left: -200px;
-    position: absolute;
+    right: rem(-35px);
+    position: relative;
+    margin-left: 0;
   }
 }
 .to-next-burger {
@@ -20,8 +21,9 @@
     margin-right: rem(30px); 
   }
   @include phones {
-    margin-left: 200px;
-    position: absolute;
+    left: rem(-35px);
+    position: relative;
+    margin-right: 0;
   }
 }
 .burgers-info {
@@ -43,6 +45,10 @@
 
   @include tablets {
     margin-bottom: rem(25px);
+    
+  }
+  @include phones {
+    padding-top: rem(55px);
   }
   
 }
@@ -75,8 +81,8 @@
     left: rem(24px);
   }
   @include phones{
-    top: rem(-70px);
-    left: rem(14px);
+    top: rem(-25px);
+    left: rem(20px);
   }
 
   &:active {
@@ -220,8 +226,8 @@
     left: auto;
   }
   @include phones{
-   
-    right: rem(28px);
+    top: rem(-25px);
+    right: rem(30px);
   }
 }
 .burgers-desc {
