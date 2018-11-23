@@ -26,12 +26,14 @@
   min-height: rem(88px);
   width: 100%;
   padding-top: rem(12px);
-  padding-right: rem(65px);
   position: absolute;
   top:0;
   left: 0;
 
   &_fullmenu {
+    .header {
+      padding-right: rem(65px);
+    }
     .menu__list {
       display: flex;
       position: fixed;
@@ -106,7 +108,7 @@
   margin-right: rem(20px);
   margin-top: rem(5px);
   display: none;
-  position: fixed;
+  // position: fixed;
   top: rem(34px);
   right: rem(15px);
   z-index: 100;

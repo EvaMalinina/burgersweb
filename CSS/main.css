@@ -762,10 +762,12 @@ p {
   min-height: 5.5rem;
   width: 100%;
   padding-top: 0.75rem;
-  padding-right: 4.0625rem;
   position: absolute;
   top: 0;
   left: 0;
+}
+.header_fullmenu .header {
+  padding-right: 4.0625rem;
 }
 .header_fullmenu .menu__list {
   display: flex;
@@ -834,7 +836,6 @@ p {
   margin-right: 1.25rem;
   margin-top: 0.3125rem;
   display: none;
-  position: fixed;
   top: 2.125rem;
   right: 0.9375rem;
   z-index: 100;
