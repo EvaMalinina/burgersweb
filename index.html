@@ -126,113 +126,318 @@
       <section class="section burgers">
         <div class="container  container_without-align">
           
-            <a href="#" class="to-prev-burger">
-              <img src="pictures/arrow-prec.png" alt="arrow" class="arrow-prev">
-            </a>
-            <div class="burgers-info">
-              <div class="burgers-pic">
-                <div class="burgers-pic__item">
-                    <img src="pictures/darkbeef-burger.png" alt="darkbeef-burger" class="burgers__item">
-                    
-                </div>
-                <div class="burgers-pic__consist" id="ingridients">
-                    <img src="pictures/tiny-burger.png" alt="tiny-burger" class="burgers__consist">
-                    <h6 class="section-title section-title_color_white section-title_position_center section-title_fs14 section-title_lh0">состав</h6>
-                    <div class="burgers-pic__drop" >
-                      <ul class="burgers__list">
-                        <li class="burgers__item">
-                          <div class="burgers__beef">
-                            <svg class="beef-icon">
-                              <use xlink:href="pictures/sprite.svg#beef-drop"></use>
-                            </svg>
-                          </div> 
-                          <diV class="burgers__item-text">
-                            <div class="burgers__item-name">Говядина</div>
-                            <p>300 г</p>
-                          </diV>
-                        </li>
-                        <li class="burgers__item">
-                          <div class="burgers__buns">
-                            <svg class="buns-icon">
-                              <use xlink:href="pictures/sprite.svg#buns-drop"></use>
-                            </svg>
-                          </div> 
-                          <diV class="burgers__item-text">
-                            <div class="burgers__item-name">Булочки</div>
-                            <p>100 г</p>
-                          </diV>
-                        </li>
-                        <li class="burgers__item">
-                          <div class="burgers__salad">
-                            <svg class="salad-icon">
-                              <use xlink:href="pictures/sprite.svg#salad-drop"></use>
-                            </svg>
-                          </div> 
-                          <diV class="burgers__item-text">
-                            <div class="burgers__item-name">Зелень</div>
-                            <p>70 г</p>
-                          </diV>
-                        </li>
-                        <li class="burgers__item">
-                          <div class="burgers__sauce">
-                            <svg class="sauce-icon">
-                              <use xlink:href="pictures/sprite.svg#sauce-drop"></use>
-                            </svg>
-                          </div> 
-                          <diV class="burgers__item-text">
-                            <div class="burgers__item-name">Соус</div>
-                            <p>150 г</p>
-                          </diV>
-                        </li>
-                        <li class="burgers__item">
-                          <div class="burgers__cucumber">
-                            <svg class="cucumber-icon">
-                              <use xlink:href="pictures/sprite.svg#cucumber-drop"></use>
-                            </svg>
-                          </div> 
-                          <diV class="burgers__item-text">
-                            <div class="burgers__item-name">Овощи</div>
-                            <p>200 г</p>
-                          </diV>
-                        </li>
-                        <li class="burgers__item">
-                          <div class="burgers__cheese">
-                            <svg class="cheese-icon">
-                              <use xlink:href="pictures/sprite.svg#cheese-drop"></use>
-                            </svg>
-                          </div> 
-                          <diV class="burgers__item-text">
-                            <div class="burgers__item-name">Сыр</div>
-                            <p>80 г</p>
-                          </diV>
-                        </li>
-                      </ul>
-                      <ul class="dagger" id="dagger">
-                        <li class="dagger__item"></li>
-                        <li class="dagger__item"></li>
-                      </ul>
+           <div class="slider" id="slider">
+               <a href="#" class="slider__control  to-prev-burger" data-vector="prev">
+                <img src="pictures/arrow-prec.png" alt="arrow" class="arrow-prev ">
+               </a>
+              <div class="slider__wrap">
+                <ul class="slider__list">
+                  <li class="slider__burgers-info slider__burgers-info_active">
+                    <div class="burgers-pic">
+                      <div class="burgers-pic__item">
+                          <img src="pictures/darkbeef-burger.png" alt="darkbeef-burger" class="burgers__item">
+                      </div>
+                      <div class="burgers-pic__consist" id="ingridients">
+                          <img src="pictures/tiny-burger.png" alt="tiny-burger" class="burgers__consist">
+                          <h6 class="section-title section-title_color_white section-title_position_center section-title_fs14 section-title_lh0">состав</h6>
+                          <div class="burgers-pic__drop" >
+                            <ul class="burgers__list">
+                              <li class="burgers__item">
+                                <div class="burgers__beef">
+                                  <svg class="beef-icon">
+                                    <use xlink:href="pictures/sprite.svg#beef-drop"></use>
+                                  </svg>
+                                </div> 
+                                <diV class="burgers__item-text">
+                                  <div class="burgers__item-name">Говядина</div>
+                                  <p>300 г</p>
+                                </diV>
+                              </li>
+                              <li class="burgers__item">
+                                <div class="burgers__buns">
+                                  <svg class="buns-icon">
+                                    <use xlink:href="pictures/sprite.svg#buns-drop"></use>
+                                  </svg>
+                                </div> 
+                                <diV class="burgers__item-text">
+                                  <div class="burgers__item-name">Булочки</div>
+                                  <p>100 г</p>
+                                </diV>
+                              </li>
+                              <li class="burgers__item">
+                                <div class="burgers__salad">
+                                  <svg class="salad-icon">
+                                    <use xlink:href="pictures/sprite.svg#salad-drop"></use>
+                                  </svg>
+                                </div> 
+                                <diV class="burgers__item-text">
+                                  <div class="burgers__item-name">Зелень</div>
+                                  <p>70 г</p>
+                                </diV>
+                              </li>
+                              <li class="burgers__item">
+                                <div class="burgers__sauce">
+                                  <svg class="sauce-icon">
+                                    <use xlink:href="pictures/sprite.svg#sauce-drop"></use>
+                                  </svg>
+                                </div> 
+                                <diV class="burgers__item-text">
+                                  <div class="burgers__item-name">Соус</div>
+                                  <p>150 г</p>
+                                </diV>
+                              </li>
+                              <li class="burgers__item">
+                                <div class="burgers__cucumber">
+                                  <svg class="cucumber-icon">
+                                    <use xlink:href="pictures/sprite.svg#cucumber-drop"></use>
+                                  </svg>
+                                </div> 
+                                <diV class="burgers__item-text">
+                                  <div class="burgers__item-name">Овощи</div>
+                                  <p>200 г</p>
+                                </diV>
+                              </li>
+                              <li class="burgers__item">
+                                <div class="burgers__cheese">
+                                  <svg class="cheese-icon">
+                                    <use xlink:href="pictures/sprite.svg#cheese-drop"></use>
+                                  </svg>
+                                </div> 
+                                <diV class="burgers__item-text">
+                                  <div class="burgers__item-name">Сыр</div>
+                                  <p>80 г</p>
+                                </diV>
+                              </li>
+                            </ul>
+                            <ul class="dagger" id="dagger">
+                              <li class="dagger__item"></li>
+                              <li class="dagger__item"></li>
+                            </ul>
+                          </div>
+                      </div>
+                      <div class="burgers-pic__kkal">
+                        <img src="pictures/kkal.png" alt="kkal-burger" class="burges__kkal">
+                        <h6 class="section-title section-title_kkal section-title_position_center section-title_fs14">1200 kkal</h6>
+                      </div>
                     </div>
-                  </div>
-                  <div class="burgers-pic__kkal">
-                    <img src="pictures/kkal.png" alt="kkal-burger" class="burges__kkal">
-                    <h6 class="section-title section-title_kkal section-title_position_center section-title_fs14">1200 kkal</h6>
-                  </div>
+                    <div class="burgers-desc">
+                      <h2 class="section-title section-title_color_white section-title_mb55 section-title_burger">dark beef burger</h2>
+                      <div class="burgers-desc__text">
+                        <p>Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.</p>
+                      </div>
+                      <div class="burges-desc__price">
+                        <h3 class="section-title section-title_color_red">500</h3>
+                        <h3 class="section-title section-title_color_red section-title_fs36">рублей</h3>
+                        <a href="" class="button">Заказать</a>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="slider__burgers-info">
+                    <div class="burgers-pic">
+                      <div class="burgers-pic__item">
+                          <img src="pictures/darkbeef-burger.png" alt="darkbeef-burger" class="burgers__item">
+                      </div>
+                      <div class="burgers-pic__consist" id="ingridients">
+                          <img src="pictures/tiny-burger.png" alt="tiny-burger" class="burgers__consist">
+                          <h6 class="section-title section-title_color_white section-title_position_center section-title_fs14 section-title_lh0">состав</h6>
+                          <div class="burgers-pic__drop" >
+                            <ul class="burgers__list">
+                              <li class="burgers__item">
+                                <div class="burgers__beef">
+                                  <svg class="beef-icon">
+                                    <use xlink:href="pictures/sprite.svg#beef-drop"></use>
+                                  </svg>
+                                </div> 
+                                <diV class="burgers__item-text">
+                                  <div class="burgers__item-name">Говядина</div>
+                                  <p>300 г</p>
+                                </diV>
+                              </li>
+                              <li class="burgers__item">
+                                <div class="burgers__buns">
+                                  <svg class="buns-icon">
+                                    <use xlink:href="pictures/sprite.svg#buns-drop"></use>
+                                  </svg>
+                                </div> 
+                                <diV class="burgers__item-text">
+                                  <div class="burgers__item-name">Булочки</div>
+                                  <p>100 г</p>
+                                </diV>
+                              </li>
+                              <li class="burgers__item">
+                                <div class="burgers__salad">
+                                  <svg class="salad-icon">
+                                    <use xlink:href="pictures/sprite.svg#salad-drop"></use>
+                                  </svg>
+                                </div> 
+                                <diV class="burgers__item-text">
+                                  <div class="burgers__item-name">Зелень</div>
+                                  <p>70 г</p>
+                                </diV>
+                              </li>
+                              <li class="burgers__item">
+                                <div class="burgers__sauce">
+                                  <svg class="sauce-icon">
+                                    <use xlink:href="pictures/sprite.svg#sauce-drop"></use>
+                                  </svg>
+                                </div> 
+                                <diV class="burgers__item-text">
+                                  <div class="burgers__item-name">Соус</div>
+                                  <p>150 г</p>
+                                </diV>
+                              </li>
+                              <li class="burgers__item">
+                                <div class="burgers__cucumber">
+                                  <svg class="cucumber-icon">
+                                    <use xlink:href="pictures/sprite.svg#cucumber-drop"></use>
+                                  </svg>
+                                </div> 
+                                <diV class="burgers__item-text">
+                                  <div class="burgers__item-name">Овощи</div>
+                                  <p>200 г</p>
+                                </diV>
+                              </li>
+                              <li class="burgers__item">
+                                <div class="burgers__cheese">
+                                  <svg class="cheese-icon">
+                                    <use xlink:href="pictures/sprite.svg#cheese-drop"></use>
+                                  </svg>
+                                </div> 
+                                <diV class="burgers__item-text">
+                                  <div class="burgers__item-name">Сыр</div>
+                                  <p>80 г</p>
+                                </diV>
+                              </li>
+                            </ul>
+                            <ul class="dagger" id="dagger">
+                              <li class="dagger__item"></li>
+                              <li class="dagger__item"></li>
+                            </ul>
+                          </div>
+                      </div>
+                      <div class="burgers-pic__kkal">
+                        <img src="pictures/kkal.png" alt="kkal-burger" class="burges__kkal">
+                        <h6 class="section-title section-title_kkal section-title_position_center section-title_fs14">1200 kkal</h6>
+                      </div>
+                    </div>
+                    <div class="burgers-desc">
+                      <h2 class="section-title section-title_color_white section-title_mb55 section-title_burger">dark beef burger</h2>
+                      <div class="burgers-desc__text">
+                        <p>Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.</p>
+                      </div>
+                      <div class="burges-desc__price">
+                        <h3 class="section-title section-title_color_red">500</h3>
+                        <h3 class="section-title section-title_color_red section-title_fs36">рублей</h3>
+                        <a href="" class="button">Заказать</a>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="slider__burgers-info">
+                    <div class="burgers-pic">
+                      <div class="burgers-pic__item">
+                          <img src="pictures/darkbeef-burger.png" alt="darkbeef-burger" class="burgers__item">
+                      </div>
+                      <div class="burgers-pic__consist" id="ingridients">
+                          <img src="pictures/tiny-burger.png" alt="tiny-burger" class="burgers__consist">
+                          <h6 class="section-title section-title_color_white section-title_position_center section-title_fs14 section-title_lh0">состав</h6>
+                          <div class="burgers-pic__drop" >
+                            <ul class="burgers__list">
+                              <li class="burgers__item">
+                                <div class="burgers__beef">
+                                  <svg class="beef-icon">
+                                    <use xlink:href="pictures/sprite.svg#beef-drop"></use>
+                                  </svg>
+                                </div> 
+                                <diV class="burgers__item-text">
+                                  <div class="burgers__item-name">Говядина</div>
+                                  <p>300 г</p>
+                                </diV>
+                              </li>
+                              <li class="burgers__item">
+                                <div class="burgers__buns">
+                                  <svg class="buns-icon">
+                                    <use xlink:href="pictures/sprite.svg#buns-drop"></use>
+                                  </svg>
+                                </div> 
+                                <diV class="burgers__item-text">
+                                  <div class="burgers__item-name">Булочки</div>
+                                  <p>100 г</p>
+                                </diV>
+                              </li>
+                              <li class="burgers__item">
+                                <div class="burgers__salad">
+                                  <svg class="salad-icon">
+                                    <use xlink:href="pictures/sprite.svg#salad-drop"></use>
+                                  </svg>
+                                </div> 
+                                <diV class="burgers__item-text">
+                                  <div class="burgers__item-name">Зелень</div>
+                                  <p>70 г</p>
+                                </diV>
+                              </li>
+                              <li class="burgers__item">
+                                <div class="burgers__sauce">
+                                  <svg class="sauce-icon">
+                                    <use xlink:href="pictures/sprite.svg#sauce-drop"></use>
+                                  </svg>
+                                </div> 
+                                <diV class="burgers__item-text">
+                                  <div class="burgers__item-name">Соус</div>
+                                  <p>150 г</p>
+                                </diV>
+                              </li>
+                              <li class="burgers__item">
+                                <div class="burgers__cucumber">
+                                  <svg class="cucumber-icon">
+                                    <use xlink:href="pictures/sprite.svg#cucumber-drop"></use>
+                                  </svg>
+                                </div> 
+                                <diV class="burgers__item-text">
+                                  <div class="burgers__item-name">Овощи</div>
+                                  <p>200 г</p>
+                                </diV>
+                              </li>
+                              <li class="burgers__item">
+                                <div class="burgers__cheese">
+                                  <svg class="cheese-icon">
+                                    <use xlink:href="pictures/sprite.svg#cheese-drop"></use>
+                                  </svg>
+                                </div> 
+                                <diV class="burgers__item-text">
+                                  <div class="burgers__item-name">Сыр</div>
+                                  <p>80 г</p>
+                                </diV>
+                              </li>
+                            </ul>
+                            <ul class="dagger" id="dagger">
+                              <li class="dagger__item"></li>
+                              <li class="dagger__item"></li>
+                            </ul>
+                          </div>
+                      </div>
+                      <div class="burgers-pic__kkal">
+                        <img src="pictures/kkal.png" alt="kkal-burger" class="burges__kkal">
+                        <h6 class="section-title section-title_kkal section-title_position_center section-title_fs14">1200 kkal</h6>
+                      </div>
+                    </div>
+                    <div class="burgers-desc">
+                      <h2 class="section-title section-title_color_white section-title_mb55 section-title_burger">dark beef burger</h2>
+                      <div class="burgers-desc__text">
+                        <p>Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.</p>
+                      </div>
+                      <div class="burges-desc__price">
+                        <h3 class="section-title section-title_color_red">500</h3>
+                        <h3 class="section-title section-title_color_red section-title_fs36">рублей</h3>
+                        <a href="" class="button">Заказать</a>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
               </div>
-              <div class="burgers-desc">
-                <h2 class="section-title section-title_color_white section-title_mb55 section-title_burger">dark beef burger</h2>
-                <div class="burgers-desc__text">
-                  <p>Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.</p>
-                </div>
-                <div class="burges-desc__price">
-                  <h3 class="section-title section-title_color_red">500</h3>
-                  <h3 class="section-title section-title_color_red section-title_fs36">рублей</h3>
-                  <a href="" class="button">Заказать</a>
-                </div>
-              </div>
-            </div>
-            <a href="#" class="to-next-burger">
-              <img src="pictures/arrow-next.png" alt="arrow" class="arrow-next">
-            </a>
+              <a href="#" class=" to-next-burger" data-vector="prev">
+                <img src="pictures/arrow-next.png" alt="arrow" class="slider__control arrow-next">
+              </a>
+           </div>
           
         </div>
       </section>
@@ -242,7 +447,7 @@
           <div class="team__desc">
             <div class="section-title section-title_mb55">команда</div>
             <ul class="team-acco" id="accordeon">
-              <li class="team-acco__member active">
+              <li class="team-acco__member">
                 <a class="title-name title-name_team-acco">Дэниэл редклиф</a>
                 <div class="team-acco__wrap">
                   <div class="team-acco__member-data">
@@ -307,10 +512,9 @@
         <div class="bigmenu__name">
            <h2 class="section-title section-title_color_white">меню</h2>
         </div>
-        <ul class="bigmenu__pages">
-          <li class="bigmenu__page">
+        <ul class="bigmenu__pages" id="accordeonmenu">
+          <li class="bigmenu__page" id="bigmenu__page">
              <a href="#" class="bigmenu__trigger" style="background-image: url(pictures/bg-formeatmenu.jpg)"><span>для мясоедов</span></a>
-                 <!-- <h2 class="section-title section-title_color_white section-title_vertical section-title_fs40"></h2> -->
               <div class="bigmenu__wrap">
                 <div class="bigmenu__desc">
                   <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo aperiam labore minima accusantium hic autem asperiores iusto alias amet. Sequi sapiente illum aliquam rem cumque dolores dolore est odit minus! </p>
@@ -321,24 +525,28 @@
               </ul>
               </div>
           </li>
-          <li class="bigmenu__page">
+          <li class="bigmenu__page" >
               <a href="#" class="bigmenu__trigger" style="background-image: url(pictures/bg-forvegeterianmenu.jpg)"><span>Вегетарианское</span></a>
-                  <!-- <h2 class="section-title section-title_color_white section-title_vertical section-title_fs40"></h2> -->
                <div class="bigmenu__wrap">
                  <div class="bigmenu__desc">
                    <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo aperiam labore minima accusantium hic autem asperiores iusto alias amet. Sequi sapiente illum aliquam rem cumque dolores dolore est odit minus! </p>
                  </div>
-                 
+                 <ul class="cross">
+                  <li class="cross__item"></li>
+                  <li class="cross__item"></li>
+                </ul>
                </div>
            </li>
-           <li class="bigmenu__page">
+           <li class="bigmenu__page" >
               <a href="#" class="bigmenu__trigger" style="background-image: url(pictures/bg-fordietmenu.jpg)"><span>Диетическое</span></a>
-                  <!-- <h2 class="section-title section-title_color_white section-title_vertical section-title_fs40"></h2> -->
                <div class="bigmenu__wrap">
                  <div class="bigmenu__desc">
                    <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo aperiam labore minima accusantium hic autem asperiores iusto alias amet. Sequi sapiente illum aliquam rem cumque dolores dolore est odit minus! </p>
                 </div>
-                
+                <ul class="cross" >
+                  <li class="cross__item"></li>
+                  <li class="cross__item"></li>
+                </ul>
                </div>
            </li>
         </ul>
@@ -430,18 +638,20 @@
       <section class="section order section_centered">
         <div class="container">
           <h2 class="section-title section-title_mb55 section-title_position_center">закажите доставку</h2>
-          <div class="order-form">
+          <form class="order-form" id="myform">
             <div class="form">
-              <form action="" class="form1__elem">
+              <div action="" class="form1__elem">
                 <div class="form1__content">
                   <div class="form__row">
                     <label class="form__block">
                       <div class="form__block-title">Имя</div>
-                      <input type="text" class="form__input">
+                      <input type="text" class="form__input" name="name" required>
+                      <div class="error"></div>
                     </label>
                     <label class="form__block">
                       <div class="form__block-title">Телефон</div>
-                      <input type="text" class="form__input" placeholder="887659300">
+                      <input class="form__input" name="phone" placeholder="887659300" required>
+                      <div class="error"></div>
                     </label>
                   </div>
                   <div class="form__row">
@@ -469,16 +679,17 @@
                     </label>
                   </div>
                 </div>
-              </form>
+              </div>
             </div>
             <div class="form">
-                <form action="" class="form2__elem">
+                <div action="" class="form2__elem" >
                   <div class="form2__content">
                     <div class="form__row">
                       <label class="form__block">
                           <div class="form__block-title">Комментарий</div>
-                          <textarea name="text" class="form__block-textarea" placeholder="Укажите детали заказа" ></textarea>
-                      </label>
+                          <textarea name="text" class="form__block-textarea" placeholder="Укажите детали заказа" required></textarea>
+                           <div class="error"></div>
+                       </label>
                      </div>
                      <div class="form__row">
                        <div class="radio__controls">
@@ -500,16 +711,18 @@
                           <span class="checkbox__input-fake"></span>
                           <span class="checkbox__label-text">Не перезванивать</span>
                       </label>
+                     </div>
+                    <div class="form__row">
+                      <button class="button button_mg-0" id="send">Заказать</button>
+                      <button class="button button_transparent">Очистить</button>
+                    </div>
                   </div>
-                  <div class="form__row">
-                    <button class="button button_mg-0">Заказать</button>
-                    <button class="button button_transparent">Очистить</button>
-                  </div>
-                </form>
-             </div>
-          </div>
+                </div>
+            </div>
+          </form>
         </div>
       </section>
+
       <section class="section contacts">
         
           <footer class="footer">

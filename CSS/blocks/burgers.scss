@@ -3,40 +3,63 @@
   background: rgb(249,180,59);
   background: linear-gradient(0deg, rgba(249,180,59,1) 0%, rgba(235,140,56,1) 50%, rgba(249,180,59,1) 100%);
 }
+.slider {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.slider__wrap {
+  flex: 1;
+  overflow: hidden;
+}
+.slider__control {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  cursor: pointer;
+}
 .to-prev-burger {
-  margin-left: rem(40px); 
+  left: rem(-23px);
+
   @include tablets {
-    margin-left: rem(30px); 
+    left: rem(22px); 
   }
   @include phones {
-    right: rem(-35px);
-    position: relative;
-    margin-left: 0;
+    left: rem(0px);
+    position: absolute;
   }
 }
 .to-next-burger {
- 
-  margin-right: rem(40px);
+  right: rem(-23px);
+
   @include tablets {
-    margin-right: rem(30px); 
+    right: rem(22px); 
   }
   @include phones {
-    left: rem(-35px);
-    position: relative;
-    margin-right: 0;
+    right: rem(0px);
+    position: absolute;
   }
 }
-.burgers-info {
+.slider__list {
   display: flex;
-  
+  transition: 1s;
+}
+.slider__burgers-info {
+  display: flex;
+  overflow: hidden;
+  flex: 1;
+  margin-left: rem(25px);
 
   @include tablets {
     flex-direction: column;
     align-items: center;
-    flex: 1;
+    padding: 0% 11%;
   }
-  
+  @include phones {
+    padding: 0;
+  }
 }
+
 .burgers-pic {
   display: flex;
   align-items: center;
@@ -85,7 +108,7 @@
     left: rem(20px);
   }
 
-  &:active {
+  &_active {
     background: $red;
     cursor: pointer;
     .burgers-pic__drop {
