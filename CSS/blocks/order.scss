@@ -4,6 +4,7 @@
 }
 .order-form {
   display: flex;
+  position: relative;
 
   @include tablets{
     flex-direction: column;
@@ -176,8 +177,8 @@
 
 .popup {
   display: none;
-  height: rem(100px);
-  width: rem(100px);
+  height: rem(110px);
+  width: rem(200px);
   background-color: #fff;
   padding: rem(20px);
 
@@ -185,12 +186,18 @@
     color: black;
     font-size: rem(14px);
     font-family: 'ubuntulight';
-
-    &_active {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-direction: column;
-    }
+    text-align: center;
+   
   }
+  &_active {
+    position: absolute;
+    top: 40%;
+    left: 40%;;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    z-index: 66;
+  }
+
 }

@@ -185,13 +185,18 @@ myform.addEventListener('submit', event => {
     var data = JSON.parse(xhr.responseText);
     
     if (data.status == 1) {
-      var popup = document.querySelector('#popup');
+      var popup = document.querySelector('#show');
+      var message = popup.querySelector('.popup__message');
+      message.textContent = data.message;
+5
+      message.innerHTML = 'Сообщение отправлено ';
+
       popup.classList.add('popup_active');
-      alert(data.popup_active);
-    } else {
-      alert(data.message);
+     
     }
-  }
+    // console.log(data.popup);
+    }  
+  });
  
   // xhr.addEventListener('load', (response) => {
   //   console.log(response);
@@ -208,7 +213,7 @@ myform.addEventListener('submit', event => {
   // });
   
 
-});
+
 
 
 function validateForm(form) {
@@ -233,4 +238,10 @@ function validateField(field) {
   field.nextElementSibling.textContent = field.validationMessage;
   return field.checkValidity();
 }
+
+document.querySelector('#popupclose').addEventListener('click', function() {
+  var popupclose = document.querySelector('.popup');
+
+  popupclose.classList.remove('popup_active');
+});
 

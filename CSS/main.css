@@ -1647,7 +1647,12 @@ p {
   }
 }
 .bigmenu__page_active .cross-block {
-  display: block;
+  display: none;
+}
+@media screen and (max-width: 480px) {
+  .bigmenu__page_active .cross-block {
+    display: block;
+  }
 }
 .bigmenu__wrap {
   width: 0;
@@ -1694,6 +1699,7 @@ p {
   right: 1.875rem;
   top: 1.875rem;
   display: none;
+  cursor: pointer;
 }
 
 .cross {
@@ -1775,6 +1781,7 @@ p {
 
 .order-form {
   display: flex;
+  position: relative;
 }
 @media screen and (max-width: 768px) {
   .order-form {
@@ -1948,14 +1955,26 @@ p {
 
 .popup {
   display: none;
-  height: 6.25rem;
-  width: 6.25rem;
+  height: 6.875rem;
+  width: 12.5rem;
   background-color: #fff;
+  padding: 1.25rem;
 }
 .popup__message {
   color: black;
   font-size: 0.875rem;
   font-family: "ubuntulight";
+  text-align: center;
+}
+.popup_active {
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  z-index: 66;
 }
 
 .contacts {
