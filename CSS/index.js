@@ -13,29 +13,33 @@ document.querySelector('#humburger').addEventListener('click', function() {
     var posX = 0;
 
     listb.style.width = `${widthList}px`;
-
+   
     slider.addEventListener ('click', function (e) {
-      if (e.target.classList.contains('slider__control')) {
+      var arrow = e.target.closest('a');
+           
+      if (arrow.classList.contains('slider__control')) {
         e.preventDefault();
 
-        console.log(e.target);
+        console.log(arrow);
 
-        var vector= e.target.dataset.vector;
-        var active = slider.querySelector('slider__burger-info_active');
+        var vector= arrow.dataset.vector;
+        var active = slider.querySelector('.active');
+
+        console.log(active);
 
         if (vector === 'next') {
           if (active.nextElementSibling) {
             posX += widthWrap;
             listb.style.transform = `translateX(${-posX}px)`;
-            active.classList.remove('slider__burger-info_active');
-            active.nextElementSibling.classList.add('slider__burger-info_active');
+            active.classList.remove('active');
+            active.nextElementSibling.classList.add('active');
           }
         } else {
           if (active.previousElementSibling) {
             posX -= widthWrap;
-            listb.style.transform = `translateX(${posX}px)`;
-            active.classList.remove('slider__burger-info_active');
-            active.previousElementSibling.classList.add('slider__burger-info_active');
+            listb.style.transform = `translateX(${-posX}px)`;
+            active.classList.remove('active');
+            active.previousElementSibling.classList.add('active');
           }
         }
       }
@@ -106,15 +110,25 @@ document.querySelector('#humburger').addEventListener('click', function() {
   var list = document.querySelector('#accordeonmenu');
 
   list.addEventListener('click', function (e) {
-    if (e.target.classList.contains('bigmenu__trigger')) {
+    if (e.target.classList.contains('cross')) {
+      var active = list.querySelector('.bigmenu__page_active');
+  
+      active.classList.remove('bigmenu__page_active');
+      return;
+    }
+    var linkk = e.target.closest('a');
+
+    console.log(linkk);
+    if (linkk.classList.contains('bigmenu__trigger')) {
     e.preventDefault();
 
-    var item = e.target.closest('li');
+    var item = linkk.closest('li');
     var items = list.children;
-    var wrap = e.target.nextElementSibling;
+    var wrap =linkk.nextElementSibling;
     var widthContent = wrap.firstElementChild.clientWidth;
 
     if (!item.classList.contains('bigmenu__page_active')) {
+
       for (let i = 0; i < items.length; i++) {
         const element = items[i];
 
@@ -128,22 +142,13 @@ document.querySelector('#humburger').addEventListener('click', function() {
       item.classList.remove ('bigmenu__page_active');
       // wrap.style.width = 0;
     }
+    
   }
+  
 });
+
 
 }) ('#accordeonmenu');
-
-document.querySelector('#cross').addEventListener('click', function() {
-  var cross = document.querySelector('.cross');
-  console.log(cross);
-  
-  var close = document.querySelector('.bigmenu__page');
-  
-  close.classList.toggle('bigmenu__page_active');
-  cross.classList.remove('bigmenu__page_active');
-
-  
-});
 
 
 
@@ -161,28 +166,50 @@ document.querySelector('#dagger').addEventListener('click', function() {
 
 
 
-
-
 const myform = document.querySelector('#myform');
-const send = document.querySelector('#send');
+// const send = document.querySelector('#send');
 
-send.addEventListener('click', event => {
-  const FormData = {
-    name: myform.elements.name.value,
-    phone: myform.elements.phone.value,
-    text: myform.elements.text.value
-  };
- 
+myform.addEventListener('submit', event => {
+    event.preventDefault();
+
+    const data = new FormData(myform);
+    data.append('to', 'userdotsenko@gmail.com');
+    console.log(data);
+
   const xhr = new XMLHttpRequest();
-  xhr.responseType = 'json';
+ 
   xhr.open ('POST', 'https://webdev-api.loftschool.com/sendmail');
-  xhr.send(JSON.stringify(FormData));
-  xhr.addEventListener('load', () => {
-    if(xhr.response.status) {
-      console.log('отправка удалась')
+  xhr.send(data);
+  xhr.onreadystatechange = function() {
+    if (xhr.readyState != 4) return;
+    var data = JSON.parse(xhr.responseText);
+    
+    if (data.status == 1) {
+      var popup = document.querySelector('#popup');
+      popup.classList.add('popup_active');
+      alert(data.popup_active);
+    } else {
+      alert(data.message);
     }
-  });
+  }
+ 
+  // xhr.addEventListener('load', (response) => {
+  //   console.log(response);
+  //   if(xhr.statusCode) {
+  //     console.log('отправка удалась')
+  //     console.log(xhr.response.status)
+  //   }
+  // });
+  // fetch('https://webdev-api.loftschool.com/sendmail', {method:'POST', body:data}).then(function(res){ 
+  //   return res.json();
+
+  // }).then(function(data){
+  //   console.log(data);
+  // });
+  
+
 });
+
 
 function validateForm(form) {
   let valid = true;
@@ -206,3 +233,4 @@ function validateField(field) {
   field.nextElementSibling.textContent = field.validationMessage;
   return field.checkValidity();
 }
+

@@ -1117,10 +1117,20 @@ p {
   align-items: center;
   width: 100%;
 }
+@media screen and (max-width: 768px) {
+  .slider {
+    height: 100%;
+  }
+}
 
 .slider__wrap {
   flex: 1;
   overflow: hidden;
+}
+@media screen and (max-width: 768px) {
+  .slider__wrap {
+    height: 80%;
+  }
 }
 
 .slider__control {
@@ -1164,6 +1174,11 @@ p {
   display: flex;
   transition: 1s;
 }
+@media screen and (max-width: 768px) {
+  .slider__list {
+    height: 100%;
+  }
+}
 
 .slider__burgers-info {
   display: flex;
@@ -1175,12 +1190,14 @@ p {
   .slider__burgers-info {
     flex-direction: column;
     align-items: center;
-    padding: 0% 11%;
+    height: 100%;
+    justify-content: center;
   }
 }
 @media screen and (max-width: 480px) {
   .slider__burgers-info {
     padding: 0;
+    margin-left: 0;
   }
 }
 
@@ -1387,12 +1404,12 @@ p {
   .burgers-desc {
     text-align: center;
     align-items: center;
-    padding: 0 10%;
+    padding: 0 12%;
   }
 }
 @media screen and (max-width: 480px) {
   .burgers-desc {
-    padding: 0 12%;
+    padding: 0 4%;
   }
 }
 
@@ -1603,6 +1620,15 @@ p {
   left: 0;
   z-index: 1;
 }
+@media screen and (max-width: 480px) {
+  .bigmenu__page_active {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: 1;
+  }
+}
 .bigmenu__page_active .bigmenu__trigger span {
   color: #f9b43b;
 }
@@ -1620,19 +1646,19 @@ p {
     width: 100%;
   }
 }
-@media screen and (max-width: 480px) {
-  .bigmenu__page_active .cross {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 30px;
-    right: 30px;
-  }
+.bigmenu__page_active .cross-block {
+  display: block;
 }
 .bigmenu__wrap {
   width: 0;
   overflow: hidden;
   transition: 0.6s;
+}
+@media screen and (max-width: 480px) {
+  .bigmenu__wrap {
+    transition: 0s;
+    position: relative;
+  }
 }
 .bigmenu__trigger {
   display: flex;
@@ -1661,25 +1687,18 @@ p {
   min-width: 100%;
   color: white;
 }
-.cross {
+.cross-block {
   width: 1.25rem;
-  cursor: pointer;
+  height: 1.25rem;
+  position: absolute;
+  right: 1.875rem;
+  top: 1.875rem;
   display: none;
 }
-.cross__item {
-  height: 4px;
-  margin-bottom: 0.875rem;
-  border-radius: 0.25rem;
-  background-color: #c1c2c2;
-}
-.cross__item:last-child {
-  margin-bottom: 0;
-}
-.cross__item:nth-child(1) {
-  transform: rotate(45deg) translateY(11px);
-}
-.cross__item:nth-child(2) {
-  transform: rotate(-45deg) translateY(-11px);
+
+.cross {
+  height: 100%;
+  width: 100%;
 }
 
 .reviews__list {
@@ -1925,6 +1944,18 @@ p {
 
 .checkbox__input:checked + .checkbox__input-fake::before {
   opacity: 1;
+}
+
+.popup {
+  display: none;
+  height: 6.25rem;
+  width: 6.25rem;
+  background-color: #fff;
+}
+.popup__message {
+  color: black;
+  font-size: 0.875rem;
+  font-family: "ubuntulight";
 }
 
 .contacts {

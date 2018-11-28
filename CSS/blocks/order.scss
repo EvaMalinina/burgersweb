@@ -174,3 +174,23 @@
   opacity: 1;
 }
 
+.popup {
+  display: none;
+  height: rem(100px);
+  width: rem(100px);
+  background-color: #fff;
+  padding: rem(20px);
+
+  &__message {
+    color: black;
+    font-size: rem(14px);
+    font-family: 'ubuntulight';
+
+    &_active {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: column;
+    }
+  }
+}
