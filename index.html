@@ -12,7 +12,7 @@
   <diV class="wrapper">
     <div class="maincontent">
       
-      <section class="section welcome">
+      <section class="section welcome active">
         <video autoplay loop muted class="welcome__video">
             <source src="burger_video.mp4" type="video/mp4">
         </video>
@@ -27,25 +27,25 @@
               <nav class="menu">
                     <ul class="menu__list">
                         <li class="menu__item">
-                            <a href="#" class="menu__link">О нас</a>
+                            <a href="#" class="menu__link" data-scroll-to ="1">О нас</a>
                         </li>
                         <li class="menu__item">
-                            <a href="#" class="menu__link">Бургеры</a>
+                            <a href="#" class="menu__link" data-scroll-to ="2">Бургеры</a>
                         </li>
                         <li class="menu__item">
-                            <a href="#" class="menu__link">Команда</a>
+                            <a href="#" class="menu__link" data-scroll-to ="3">Команда</a>
                         </li>
                         <li class="menu__item">
-                          <a href="#" class="menu__link">Меню</a>
+                          <a href="#" class="menu__link" data-scroll-to ="4">Меню</a>
                         </li>
                         <li class="menu__item">
-                          <a href="#" class="menu__link">Отзывы</a>
+                          <a href="#" class="menu__link" data-scroll-to ="5">Отзывы</a>
                         </li>
                         <li class="menu__item">
-                          <a href="#" class="menu__link">Как мы работаем</a>
+                          <a href="#" class="menu__link" data-scroll-to ="6">Как мы работаем</a>
                         </li>
                         <li class="menu__item">
-                          <a href="#" class="menu__link">Контакты</a>
+                          <a href="#" class="menu__link" data-scroll-to ="7">Контакты</a>
                       </li>
                     </ul>
               </nav>  
@@ -750,21 +750,21 @@
         </ul>
       </section>
       <section class="section reviews">
-          <ul class="reviews__list">
+          <ul class="reviews__list" id="listreviews">
               <li class="reviews__item" style="background-image: url('pictures/photo-one.jpg')">
                 <div class="reviews__hover">
                   <h3 class="title-name">Катерина Великая</h3>
-                  <p class="reviews__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
+                  <p class="reviews__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным. </p>
                   <div class="reviews__details">
                     <button class="button buttonfirst button_bg-black button_mg-0">подробнее</button>
-                    <button class="button buttonsecond  button_bg-black button_mg-0">читать отзыв</button>
+                    <button class="button buttonsecond  button_bg-black button_mg-0">читать отзыв</button>  
                  </div>
                 </div>
               </li>
               <li class="reviews__item" style="background-image: url('pictures/photo-two.jpg')">
                 <div class="reviews__hover">
                   <h3 class="title-name">константин спилберг</h3>
-                  <p class="reviews__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
+                  <p class="reviews__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным. Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
                   <div class="reviews__details">
                     <button class="button buttonfirst button_bg-black button_mg-0">подробнее</button>
                     <button class="button buttonsecond  button_bg-black button_mg-0">читать отзыв</button>
@@ -774,7 +774,7 @@
               <li class="reviews__item" style="background-image: url('pictures/photo-three.jpg')">
                 <div class="reviews__hover">
                   <h3 class="title-name">Моника Пайт</h3>
-                  <p class="reviews__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
+                  <p class="reviews__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным. Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
                   <div class="reviews__details">
                     <button class="button buttonfirst button_bg-black button_mg-0">подробнее</button>
                     <button class="button buttonsecond  button_bg-black button_mg-0">читать отзыв</button>
@@ -784,7 +784,7 @@
               <li class="reviews__item" style="background-image: url('pictures/photo-four.jpg')">
                 <div class="reviews__hover">
                   <h3 class="title-name">адриан черный</h3>
-                  <p class="reviews__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
+                  <p class="reviews__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным. Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
                   <div class="reviews__details">
                     <button class="button buttonfirst button_bg-black button_mg-0">подробнее</button>
                     <button class="button buttonsecond  button_bg-black button_mg-0">читать отзыв</button>
@@ -794,7 +794,7 @@
               <li class="reviews__item" style="background-image: url('pictures/photo-five.jpg')">
                 <div class="reviews__hover">
                   <h3 class="title-name">джим копайт</h3>
-                  <p class="reviews__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
+                  <p class="reviews__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным. Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
                   <div class="reviews__details">
                     <button class="button buttonfirst button_bg-black button_mg-0">подробнее</button>
                     <button class="button buttonsecond  button_bg-black button_mg-0">читать отзыв</button>
@@ -804,7 +804,7 @@
               <li class="reviews__item" style="background-image: url('pictures/photo-six.jpg')">
                 <div class="reviews__hover">
                   <h3 class="title-name">елена прилучная</h3>
-                  <p class="reviews__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
+                  <p class="reviews__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным. Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
                   <div class="reviews__details">
                     <button class="button buttonfirst button_bg-black button_mg-0">подробнее</button>
                     <button class="button buttonsecond  button_bg-black button_mg-0">читать отзыв</button>
@@ -814,7 +814,7 @@
               <li class="reviews__item" style="background-image: url('pictures/photo-seven.jpg')">
                 <div class="reviews__hover">
                   <h3 class="title-name">евгений станивславский</h3>
-                  <p class="reviews__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
+                  <p class="reviews__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным. Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
                   <div class="reviews__details">
                     <button class="button buttonfirst button_bg-black button_mg-0">подробнее</button>
                     <button class="button buttonsecond  button_bg-black button_mg-0">читать отзыв</button>
@@ -824,7 +824,7 @@
               <li class="reviews__item" style="background-image: url('pictures/photo-eight.jpg')">
                 <div class="reviews__hover">
                   <h3 class="title-name">сем джокер</h3>
-                  <p class="reviews__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
+                  <p class="reviews__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным. Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
                   <div class="reviews__details">
                     <button class="button buttonfirst button_bg-black button_mg-0">подробнее</button>
                     <button class="button buttonsecond  button_bg-black button_mg-0">читать отзыв</button>
@@ -832,6 +832,43 @@
                 </div>
               </li>
             </ul>
+            <div class="reviews__popup" id="reviews__popup">
+              <div class="reviews__popup-info">
+                <h3 class="reviews__popup-header"></h3>
+                <p class="reviews__popup-text"></p>
+              </div>
+              <div class="reviews__popup-cross" id="popupcross">
+                <img src="pictures/reviews-popup-close.png" alt="popup-close">
+              </div>
+            </div>
+      </section>
+      <section class="section video">
+        <div class="container">
+          <h2 class="section-title section-title_color_black section-title_position_center section-title_mb55">как мы работаем</h2>
+          <div class="player">
+            <div class="player__wrapper">
+              <div id="yt-player">
+                  <video>
+                      <source src="https://www.youtube.com/watch?v=T_dHSP9s1BY" type="video/mp4">
+                  </video>
+              </div>
+              <div class="player__splash"></div>
+            </div>
+            <div class="player__controls">
+              <button class="player__start "></button>
+              <div class="player__playback">
+                <button class="player__playback-button"></button>
+              </div>
+              <button class="player__volume ">
+                <img src="pictures/icons/volume.svg" class="player__volume-icon"alt="volume-icon">
+              </button>
+              <div class="player__volumeline">
+                <button class="player__volumeline-button"></button>
+              </div>
+              
+            </div>
+          </div>
+        </div>
       </section>
       <section class="section order section_centered">
         <div class="container">
@@ -917,17 +954,17 @@
                   </div>
                 </div>
             </div>
-            <div class="popup" id="show">
-              <p class="popup__message" id="message"></p>
-              <button class="button button_mg-0" id="popupclose" >закрыть</button>
-            </div>
 
           </form>
+          <div class="popup" id="show">
+            <p class="popup__message" id="message"></p>
+            <button class="button button_mg-0" id="popupclose" >закрыть</button>
+          </div>
         </div>
       </section>
 
       <section class="section contacts">
-        
+          <div id="map"></div>
           <footer class="footer">
             <div class="container ">
               <div class="contacts-details">
@@ -1010,6 +1047,11 @@
   </diV>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.4.3/mobile-detect.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.18/jquery.touchSwipe.js"></script>
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAD-N55uT4bDIwV7xqmwUvUvmUgohgWcBE&callback=initMap"
+        async defer></script>
   <script src="CSS/index.js"></script>
 </body>
 </html>

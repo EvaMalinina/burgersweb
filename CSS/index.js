@@ -1,3 +1,108 @@
+const sections = $('.section');
+const display = $('.maincontent');
+let inScroll = false;
+const md = new MobileDetect(window.navigator.userAgent);
+const isMobile = md.mobile();
+
+const setActiveMenuItem = ItemEq => {
+  $('.fixed-menu__item')
+    .eq(ItemEq)
+    .addClass('active')
+    .siblings()
+    .removeClass('active');
+};
+
+const performTransition = sectionEq => {
+  const position = `${sectionEq * -100}%`;
+  const mouseInertionIsFinished = 200;
+  const sectionInertionIsFinished = 2000;
+
+  if (inScroll === false) {
+   inScroll = true;
+    display.css({
+    transform: `translateY(${position})`
+    });
+
+    sections
+    .eq(sectionEq)
+    .addClass('active')
+    .siblings()
+    .removeClass('active'); 
+
+  setTimeout(() => {
+    inScroll = false;
+    setActiveMenuItem(sectionEq);
+  }, sectionInertionIsFinished + mouseInertionIsFinished);
+ }
+};
+const Scrolltosection = direction =>{
+  const activeSection = sections.filter('.active');
+  const prevSection = activeSection.prev();
+  const nextSection = activeSection.next();
+
+  if (direction === 'up' && prevSection.length) {
+    performTransition(prevSection.index());
+  }
+
+  if (direction === 'down'&& nextSection.length) {
+    performTransition(nextSection.index());
+  }
+}
+
+$(document).on({
+
+  wheel: e => {
+    const direction = e.originalEvent.deltaY > 0 ? 'up':'down';
+    Scrolltosection(direction);
+  },
+  keydown: e => {
+    console.log(e.keyCode);
+
+    switch (e.keyCode) {
+      case 40:
+        Scrolltosection('down');
+        break;
+      case 38:
+        Scrolltosection('up');
+        break;
+    }
+   },
+   touchmove: e => e.preventDefault
+  
+});
+
+if (isMobile) {
+    $(document).swipe( {
+    swipe:function(
+      event, 
+      direction, 
+      distance, 
+      duration, 
+      fingerCount, 
+      fingerData
+    ) {
+      /*
+      * потому что библиотека...
+      */
+      let scrollDirection = direction ==='down' ? 'up' : 'down';
+      Scrolltosection(scrollDirection);  
+    }
+  });
+}
+
+
+
+$('[data-scroll-to]').on('click', e => {
+  e.preventDefault();
+
+  const target = $(e.currentTarget).attr('data-scroll-to');
+
+  performTransition(target);
+})
+
+
+
+
 document.querySelector('#humburger').addEventListener('click', function() {
   var header = document.querySelector('#header');
 
@@ -245,3 +350,217 @@ document.querySelector('#popupclose').addEventListener('click', function() {
   popupclose.classList.remove('popup_active');
 });
 
+
+const listreviews = document.querySelector('#listreviews')
+var reviewspopup = document.querySelector('#reviews__popup');
+
+listreviews.onclick = function(e) {
+  var target = e.target;
+
+  console.log(e.target);
+
+  if (target.tagName!=='BUTTON') return;
+  
+  var item = target.closest('li');
+  var name = item.querySelector('.title-name').textContent;
+  var text = item.querySelector('.reviews__text').textContent;
+  
+  reviewspopup.querySelector('.reviews__popup-header').textContent = name;
+  reviewspopup.querySelector('.reviews__popup-text').textContent = text;
+
+  reviewspopup.classList.add('reviews__popup_active');
+  
+}  
+
+var popupcross = document.querySelector('#popupcross');
+popupcross.addEventListener ('click', function(e) {
+  e.preventDefault();
+  var target = e.target;
+  
+
+  if (target.tagName!=='IMG') return ;
+  reviewspopup.classList.remove('reviews__popup_active');
+  
+});
+  
+let player;
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player('yt-player', {
+    height: '405',
+    width: '660',
+    videoId: 'M7lc1UVf-VE',
+    playerVars: {
+      controls: 0,
+      disablekb: 0,
+      modestbranding: 0,
+      rel: 0,
+      autoplay:0,
+      showinfo:0
+    },
+    events: {
+      'onReady': onPlayerReady
+      // 'onStateChange': onPlayerStateChange
+    }
+  });
+}
+
+$('.player__start').on('click', e => {
+  // -1 – unstarted
+  // 0 – ended
+  // 1 – playing
+  // 2 – paused
+  // 3 – buffering
+  // 5 – video cued
+  const playerStatus = player.getPlayerState();
+
+  if (playerStatus !== 1) {
+    player.playVideo();
+    $('.player__start').addClass('paused');
+  } else {
+    player.pauseVideo();
+    $('.player__start').removeClass('paused');
+  }
+  player.playVideo();
+});
+
+function onPlayerReady () {
+  const volume = player.getVolume();
+  const duration = player.getDuration();
+  let interval;
+
+  clearInterval(interval);
+  interval = setInterval(() => {
+    const completed = player.getCurrentTime();
+    const percent = (completed / duration) * 100;
+
+    changeButtonPosition(percent);
+  }, 1000);
+};
+
+$('.player__volumeline').on('click', e => {
+  const volume = player.getVolume();
+  player.setVolume();
+})
+$('.player__playback').on('click', e => {
+  const bar = $(e.currentTarget);
+  const newButtonPosition = e.pageX - bar.offset().left;
+  const clickedPercent = (newButtonPosition / bar.width())*100;
+  const newPlayerTime = (player.getDuration() / 100) * clickedPercent;
+
+  changeButtonPosition(clickedPercent);
+  player.seekTo(newPlayerTime);
+});
+
+function changeButtonPosition(percent) {
+  $('.player__playback-button').css({
+    left: `${percent}%`
+  });
+};
+
+
+function initMap() {
+  //coздание карты
+  var mapg = new google.maps.Map(document.getElementById('map'), {
+      center: { lat: 55.754471, lng: 37.605409 },
+      zoom: 10,
+      disableDefaultUI: true,
+      styles: [
+          { elementType: 'geometry', stylers: [{ color: '#242f3e' }] },
+          { elementType: 'labels.text.stroke', stylers: [{ color: '#242f3e' }] },
+          { elementType: 'labels.text.fill', stylers: [{ color: '#746855' }] },
+          {
+              featureType: 'administrative.locality',
+              elementType: 'labels.text.fill',
+              stylers: [{ color: '#d59563' }]
+          },
+          {
+              featureType: 'poi',
+              elementType: 'labels.text.fill',
+              stylers: [{ color: '#d59563' }]
+          },
+          {
+              featureType: 'poi.park',
+              elementType: 'geometry',
+              stylers: [{ color: '#ff0000' }]
+          },
+          {
+              featureType: 'poi.park',
+              elementType: 'labels.text.fill',
+              stylers: [{ color: '#111' }]
+          },
+          {
+              featureType: 'road',
+              elementType: 'geometry',
+              stylers: [{ color: '#38414e' }]
+          },
+          {
+              featureType: 'road',
+              elementType: 'geometry.stroke',
+              stylers: [{ color: '#212a37' }]
+          },
+          {
+              featureType: 'road',
+              elementType: 'labels.text.fill',
+              stylers: [{ color: '#9ca5b3' }]
+          },
+          {
+              featureType: 'road.highway',
+              elementType: 'geometry',
+              stylers: [{ color: '#746855' }]
+          },
+          {
+              featureType: 'road.highway',
+              elementType: 'geometry.stroke',
+              stylers: [{ color: '#1f2835' }]
+          },
+          {
+              featureType: 'road.highway',
+              elementType: 'labels.text.fill',
+              stylers: [{ color: '#f3d19c' }]
+          },
+          {
+              featureType: 'transit',
+              elementType: 'geometry',
+              stylers: [{ color: '#2f3948' }]
+          },
+          {
+              featureType: 'transit.station',
+              elementType: 'labels.text.fill',
+              stylers: [{ color: '#d59563' }]
+          },
+          {
+              featureType: 'water',
+              elementType: 'geometry',
+              stylers: [{ color: '#00FFFF' }]
+          },
+          {
+              featureType: 'water',
+              elementType: 'labels.text.fill',
+              stylers: [{ color: '#515c6d' }]
+          },
+          {
+              featureType: 'water',
+              elementType: 'labels.text.stroke',
+              stylers: [{ color: '#17263c' }]
+          }
+      ]
+  });
+
+  var coords = [
+    {lat:55.753025, lng:37.653314 },
+    {lat:55.715248, lng:37.628032 },
+    {lat:55.773947, lng:37.505904 }
+  ];
+
+  for (let i=0; i<coords.length; i++) {
+    new google.maps.Marker({
+      position: coords[i],
+      icon: '../pictures/icons/map-marker.svg',
+      map: mapg
+    });
+  }
+  
+}
+
+
+ 

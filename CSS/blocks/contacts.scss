@@ -1,7 +1,11 @@
 .contacts {
-background: url('../pictures/map.jpg') center center no-repeat;
-background-size: cover;
+// background: url('../pictures/map.jpg') center center no-repeat;
+// background-size: cover;
 position: relative;
+}
+#map {
+  height: 100%;
+  width: 100%;
 }
 
 .contacts-map {
