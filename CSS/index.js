@@ -52,7 +52,7 @@ const Scrolltosection = direction =>{
 $(document).on({
 
   wheel: e => {
-    const direction = e.originalEvent.deltaY > 0 ? 'up':'down';
+    const direction = e.originalEvent.deltaY > 0 ? 'down':'up';
     Scrolltosection(direction);
   },
   keydown: e => {
@@ -273,7 +273,9 @@ document.querySelector('#dagger').addEventListener('click', function() {
 
 const myform = document.querySelector('#myform');
 // const send = document.querySelector('#send');
-
+$(".reset").bind("click", function() {
+  $("input[type=text], textarea").val("");
+});
 myform.addEventListener('submit', event => {
     event.preventDefault();
 
@@ -344,6 +346,9 @@ function validateField(field) {
   return field.checkValidity();
 }
 
+
+
+
 document.querySelector('#popupclose').addEventListener('click', function() {
   var popupclose = document.querySelector('.popup');
 
@@ -383,47 +388,111 @@ popupcross.addEventListener ('click', function(e) {
   
 });
   
-let player;
-function onYouTubeIframeAPIReady() {
-  player = new YT.Player('yt-player', {
-    height: '405',
-    width: '660',
-    videoId: 'M7lc1UVf-VE',
-    playerVars: {
-      controls: 0,
-      disablekb: 0,
-      modestbranding: 0,
-      rel: 0,
-      autoplay:0,
-      showinfo:0
-    },
-    events: {
-      'onReady': onPlayerReady
-      // 'onStateChange': onPlayerStateChange
+
+$(document).ready(function(){
+  var controls = {
+      video: $("#myvideo"),
+      playpause: $(".player__start"),
+      total: $("#total"),
+      buffered: $("#buffered"),
+      progress: $("#current"),
+      
+      duration: $("#duration"),
+      currentTime: $("#currenttime"),
+      hasHours: false 
+      
+  };
+  
+  var video = controls.video[0];
+
+  controls.playpause.click(function(){
+    if (video.paused) {
+        video.play();
+        $('.player__start').addClass('paused');
+         
+    } else {
+        video.pause();
+        $('.player__start').removeClass('paused');
+       
     }
-  });
-}
-
-$('.player__start').on('click', e => {
-  // -1 – unstarted
-  // 0 – ended
-  // 1 – playing
-  // 2 – paused
-  // 3 – buffering
-  // 5 – video cued
-  const playerStatus = player.getPlayerState();
-
-  if (playerStatus !== 1) {
-    player.playVideo();
-    $('.player__start').addClass('paused');
-  } else {
-    player.pauseVideo();
-    $('.player__start').removeClass('paused');
-  }
-  player.playVideo();
+            
+    $(this).toggleClass("paused"); 
 });
+controls.playpause.click(function() {
+    controls.toggle('player__playback');
+});
+});
+  
 
-function onPlayerReady () {
+
+// video.addEventListener("canplay", function() {
+//   controls.hasHours = (video.duration / 3600) >= 1.0;                    
+//   controls.duration.text(formatTime(video.duration, controls.hasHours));
+//   controls.currentTime.text(formatTime(0),controls.hasHours);
+// }, false);
+
+
+
+// video.addEventListener("timeupdate", function() {
+//   controls.currentTime.text(formatTime(video.currentTime, controls.hasHours));
+                  
+//   var progress = Math.floor(video.currentTime) / Math.floor(video.duration);
+//   controls.progress[0].style.width = Math.floor(progress * controls.total.width()) + "px";
+// }, false);
+
+
+// controls.total.click(function(e) {
+//   var x = (e.pageX - this.offsetLeft)/$(this).width();
+//   video.currentTime = x * video.duration;
+// });
+
+// video.addEventListener("progress", function() {
+//   var buffered = Math.floor(video.buffered.end(0)) / Math.floor(video.duration);
+//   controls.buffered[0].style.width =  Math.floor(buffered * controls.total.width()) + "px";
+// }, false);
+
+
+
+// let player;
+// function onYouTubeIframeAPIReady() {
+//   player = new YT.Player('yt-player', {
+//     height: '405',
+//     width: '660',
+//     videoId: 'M7lc1UVf-VE',
+//     playerVars: {
+//       controls: 0,
+//       disablekb: 0,
+//       modestbranding: 0,
+//       rel: 0,
+//       autoplay:0,
+//       showinfo:0
+//     },
+//     events: {
+//       'onReady': onPlayerReady
+//       // 'onStateChange': onPlayerStateChange
+//     }
+//   });
+// }
+
+// $('.player__start').on('click', e => {
+//   // -1 – unstarted
+//   // 0 – ended
+//   // 1 – playing
+//   // 2 – paused
+//   // 3 – buffering
+//   // 5 – video cued
+//   const playerStatus = player.getPlayerState();
+
+//   if (playerStatus !== 1) {
+//     player.playVideo();
+//     $('.player__start').addClass('paused');
+//   } else {
+//     player.pauseVideo();
+//     $('.player__start').removeClass('paused');
+//   }
+//   player.playVideo();
+// });
+function ontimeupdate () {
   const volume = player.getVolume();
   const duration = player.getDuration();
   let interval;
@@ -437,10 +506,11 @@ function onPlayerReady () {
   }, 1000);
 };
 
-$('.player__volumeline').on('click', e => {
-  const volume = player.getVolume();
-  player.setVolume();
-})
+
+// // $('.player__volumeline').on('click', e => {
+// //   const volume = player.getVolume();
+// //   player.setVolume();
+// // })
 $('.player__playback').on('click', e => {
   const bar = $(e.currentTarget);
   const newButtonPosition = e.pageX - bar.offset().left;
@@ -559,8 +629,4 @@ function initMap() {
       map: mapg
     });
   }
-  
 }
-
-
- 

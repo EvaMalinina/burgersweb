@@ -45,11 +45,11 @@
                           <a href="#" class="menu__link" data-scroll-to ="6">Как мы работаем</a>
                         </li>
                         <li class="menu__item">
-                          <a href="#" class="menu__link" data-scroll-to ="7">Контакты</a>
+                          <a href="#" class="menu__link" data-scroll-to ="8">Контакты</a>
                       </li>
                     </ul>
               </nav>  
-              <a href="" class="button">Заказать</a>
+              <a href="" class="button" data-scroll-to ="7">Заказать</a>
               <ul class="humburger" id="humburger">
                 <li class="humburger__item"></li>
                 <li class="humburger__item"></li>
@@ -845,8 +845,41 @@
       <section class="section video">
         <div class="container">
           <h2 class="section-title section-title_color_black section-title_position_center section-title_mb55">как мы работаем</h2>
-          <div class="player">
-            <div class="player__wrapper">
+          <div class="player" id="player">
+            <div class="player__video">
+                <video id="myvideo" width="660" height="370" >
+                    <source src="QDC Burger 1 minute commercial.mp4" type='video/mp4' />
+                    
+                </video>
+            </div>
+            <div class="player__controls">
+                <button class="player__start "></button>
+                <div class="player__playback">
+                  <button class="player__playback-button"></button>
+                </div>
+                <button class="player__volume ">
+                  <img src="pictures/volume.png" class="player__volume-icon"alt="volume-icon">
+                </button>
+                <div class="player__volumeline">
+                  <button class="player__volumeline-button"></button>
+                </div>
+                
+            </div>
+
+
+            <!-- <div id="controls">
+                <span id="playpause" class="paused" >Play</span>
+                <span id="progress">
+                    <span id="total">
+                        <span id="buffered"><span id="current">​</span></span>
+                    </span>
+                </span>
+                
+            </div> -->
+
+
+
+            <!-- <div class="player__wrapper">
               <div id="yt-player">
                   <video>
                       <source src="https://www.youtube.com/watch?v=T_dHSP9s1BY" type="video/mp4">
@@ -866,7 +899,7 @@
                 <button class="player__volumeline-button"></button>
               </div>
               
-            </div>
+            </div> -->
           </div>
         </div>
       </section>
@@ -949,7 +982,7 @@
                      </div>
                     <div class="form__row">
                       <input class="button button_mg-0" id="send" type="submit" value='Заказать'>
-                      <button class="button button_transparent">Очистить</button>
+                      <button class="button button_transparent" type="reset">Очистить</button>
                     </div>
                   </div>
                 </div>
@@ -1017,31 +1050,31 @@
 
     <ul class="fixed-menu">
         <li class="fixed-menu__item active">
-          <a href="#" class="fixed-menu__link "></a>
+          <a href="#" class="fixed-menu__link" data-scroll-to ="0"></a>
         </li>
         <li class="fixed-menu__item">
-          <a href="#" class="fixed-menu__link"></a>
+          <a href="#" class="fixed-menu__link" data-scroll-to ="1"></a>
         </li>
         <li class="fixed-menu__item">
-          <a href="#" class="fixed-menu__link"></a>
+          <a href="#" class="fixed-menu__link" data-scroll-to ="2"></a>
         </li>
         <li class="fixed-menu__item">
-          <a href="#" class="fixed-menu__link"></a>
+          <a href="#" class="fixed-menu__link" data-scroll-to ="3"></a>
         </li>
         <li class="fixed-menu__item">
-          <a href="#" class="fixed-menu__link"></a>
+          <a href="#" class="fixed-menu__link" data-scroll-to ="4"></a>
         </li>
         <li class="fixed-menu__item">
-          <a href="#" class="fixed-menu__link"></a>
+          <a href="#" class="fixed-menu__link" data-scroll-to ="5"></a>
         </li>
         <li class="fixed-menu__item">
-          <a href="#" class="fixed-menu__link"></a>
+          <a href="#" class="fixed-menu__link" data-scroll-to ="6"></a>
         </li>
         <li class="fixed-menu__item">
-          <a href="#" class="fixed-menu__link"></a>
+          <a href="#" class="fixed-menu__link" data-scroll-to ="7"></a>
         </li>
         <li class="fixed-menu__item">
-          <a href="#" class="fixed-menu__link"></a>
+          <a href="#" class="fixed-menu__link" data-scroll-to ="8"></a>
         </li>
       </ul>
   </diV>
@@ -1049,7 +1082,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.4.3/mobile-detect.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.18/jquery.touchSwipe.js"></script>
-  <script src="https://www.youtube.com/iframe_api"></script>
+  <!-- <script src="https://www.youtube.com/iframe_api"></script> -->
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAD-N55uT4bDIwV7xqmwUvUvmUgohgWcBE&callback=initMap"
         async defer></script>
   <script src="CSS/index.js"></script>

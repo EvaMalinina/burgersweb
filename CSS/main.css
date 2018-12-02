@@ -1845,10 +1845,15 @@ p {
   flex-direction: column;
 }
 
+.player__video {
+  height: 370px;
+  width: 660px;
+}
+
 .player__controls {
   display: flex;
   height: 2.1875rem;
-  width: 41.25rem;
+  width: 41.125rem;
   background-color: #3e3e3e;
   position: relative;
 }
@@ -1899,17 +1904,14 @@ p {
 .player__volume {
   cursor: pointer;
   position: absolute;
-  top: -4px;
-  right: 92px;
+  top: 4px;
+  right: 101px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-}
-
-.player__volume-icon {
-  height: 38px;
-  width: 38px;
+  background: transparent;
+  border: none;
 }
 
 .player__volumeline {
