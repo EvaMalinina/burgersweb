@@ -83,10 +83,13 @@
 
   @include tablets {
     margin-bottom: rem(25px);
+    width: rem(505px);
+    height: rem(280px);
     
   }
   @include phones {
     padding-top: rem(55px);
+    width: auto;
   }
   
 }
@@ -98,6 +101,9 @@
   @include tablets {
     width: 85%;
     height: 100%;
+  }
+  @include phones{
+    width: 70%;
   }
 }
 .burgers-pic__consist {

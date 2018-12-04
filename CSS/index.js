@@ -392,140 +392,68 @@ popupcross.addEventListener ('click', function(e) {
 $(document).ready(function(){
   var controls = {
       video: $("#myvideo"),
-      playpause: $(".player__start"),
+      playpause: $("#playpause"),
       total: $("#total"),
       buffered: $("#buffered"),
       progress: $("#current"),
-      
       duration: $("#duration"),
       currentTime: $("#currenttime"),
-      hasHours: false 
-      
+      hasHours: false,
+      dynamic: $('#dynamic'),
+      togglePlayback: function () {
+          (video.paused) ? video.play() : video.pause();
+      } 
+    
   };
   
-  var video = controls.video[0];
+var video = controls.video[0];
 
-  controls.playpause.click(function(){
-    if (video.paused) {
-        video.play();
-        $('.player__start').addClass('paused');
-         
-    } else {
-        video.pause();
-        $('.player__start').removeClass('paused');
-       
-    }
-            
+controls.playpause.click(function() {
+    controls.togglePlayback();
     $(this).toggleClass("paused"); 
 });
-controls.playpause.click(function() {
-    controls.toggle('player__playback');
+
+
+controls.video.click(function () {
+  controls.togglePlayback();
 });
-});
+
+
+video.addEventListener("canplay", function () {
+  controls.hasHours = (video.duration / 3600) >= 1.0;
   
+}, false);
 
+//событие обновления времени и изменения ширины прогресса (ползунка)
+video.addEventListener("timeupdate", function () {
+    var progress = Math.floor(video.currentTime) / Math.floor(video.duration);
 
-// video.addEventListener("canplay", function() {
-//   controls.hasHours = (video.duration / 3600) >= 1.0;                    
-//   controls.duration.text(formatTime(video.duration, controls.hasHours));
-//   controls.currentTime.text(formatTime(0),controls.hasHours);
-// }, false);
+    controls.progress[0].style.left = Math.floor(progress * controls.total.width()) + "px";
+    // controls.progress[0].style.left = Math.floor(controls.progress.width() * progress) + "px";
+    console.log(controls.progress[0].style.left);
+    console.log(progress.width);
+    
+}, false);
 
-
-
-// video.addEventListener("timeupdate", function() {
-//   controls.currentTime.text(formatTime(video.currentTime, controls.hasHours));
-                  
-//   var progress = Math.floor(video.currentTime) / Math.floor(video.duration);
-//   controls.progress[0].style.width = Math.floor(progress * controls.total.width()) + "px";
-// }, false);
-
-
-// controls.total.click(function(e) {
-//   var x = (e.pageX - this.offsetLeft)/$(this).width();
-//   video.currentTime = x * video.duration;
-// });
-
-// video.addEventListener("progress", function() {
-//   var buffered = Math.floor(video.buffered.end(0)) / Math.floor(video.duration);
-//   controls.buffered[0].style.width =  Math.floor(buffered * controls.total.width()) + "px";
-// }, false);
-
-
-
-// let player;
-// function onYouTubeIframeAPIReady() {
-//   player = new YT.Player('yt-player', {
-//     height: '405',
-//     width: '660',
-//     videoId: 'M7lc1UVf-VE',
-//     playerVars: {
-//       controls: 0,
-//       disablekb: 0,
-//       modestbranding: 0,
-//       rel: 0,
-//       autoplay:0,
-//       showinfo:0
-//     },
-//     events: {
-//       'onReady': onPlayerReady
-//       // 'onStateChange': onPlayerStateChange
-//     }
-//   });
-// }
-
-// $('.player__start').on('click', e => {
-//   // -1 – unstarted
-//   // 0 – ended
-//   // 1 – playing
-//   // 2 – paused
-//   // 3 – buffering
-//   // 5 – video cued
-//   const playerStatus = player.getPlayerState();
-
-//   if (playerStatus !== 1) {
-//     player.playVideo();
-//     $('.player__start').addClass('paused');
-//   } else {
-//     player.pauseVideo();
-//     $('.player__start').removeClass('paused');
-//   }
-//   player.playVideo();
-// });
-function ontimeupdate () {
-  const volume = player.getVolume();
-  const duration = player.getDuration();
-  let interval;
-
-  clearInterval(interval);
-  interval = setInterval(() => {
-    const completed = player.getCurrentTime();
-    const percent = (completed / duration) * 100;
-
-    changeButtonPosition(percent);
-  }, 1000);
-};
-
-
-// // $('.player__volumeline').on('click', e => {
-// //   const volume = player.getVolume();
-// //   player.setVolume();
-// // })
-$('.player__playback').on('click', e => {
-  const bar = $(e.currentTarget);
-  const newButtonPosition = e.pageX - bar.offset().left;
-  const clickedPercent = (newButtonPosition / bar.width())*100;
-  const newPlayerTime = (player.getDuration() / 100) * clickedPercent;
-
-  changeButtonPosition(clickedPercent);
-  player.seekTo(newPlayerTime);
+//событие клика на ползунок, событие перематывает выдео на то место где кликнули
+controls.total.click(function (e) {
+  var x = (e.pageX - this.offsetLeft) / $(this).width();
+  video.currentTime = x * video.duration;
+});
+ 
+//событе клика на динамик (вкл/выкл звука)
+controls.dynamic.click(function () {
+    $(this).toggleClass('off');
+    video.muted = !video.muted;
 });
 
-function changeButtonPosition(percent) {
-  $('.player__playback-button').css({
-    left: `${percent}%`
+var volumeBar = document.getElementById("volume-bar");
+volumeBar.addEventListener("change", function() {
+    video.volume = volumeBar.value;
   });
-};
+});
+
+
 
 
 function initMap() {

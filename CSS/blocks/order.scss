@@ -1,6 +1,7 @@
 .order {
   background: url('../pictures/form-bg.jpg') center center no-repeat;
   background-size: cover;
+  
 }
 .order-form {
   display: flex;
@@ -192,7 +193,7 @@
   &_active {
     position: absolute;
     top: 40%;
-    left: 40%;;
+    left: 30%;
     display: flex;
     align-items: center;
     justify-content: space-between;
