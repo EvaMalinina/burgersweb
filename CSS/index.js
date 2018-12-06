@@ -428,10 +428,7 @@ video.addEventListener("canplay", function () {
 video.addEventListener("timeupdate", function () {
     var progress = Math.floor(video.currentTime) / Math.floor(video.duration);
 
-    controls.progress[0].style.left = Math.floor(progress * controls.total.width()) + "px";
-    // controls.progress[0].style.left = Math.floor(controls.progress.width() * progress) + "px";
-    console.log(controls.progress[0].style.left);
-    console.log(progress.width);
+    controls.progress[0].style.width = Math.floor(progress * controls.total.width()) + "px";
     
 }, false);
 

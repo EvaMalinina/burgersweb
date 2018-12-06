@@ -72,6 +72,10 @@ body {
   overflow: hidden;
   height: 100%;
   width: 100%;
+
+  @include phones {
+    height: auto;
+  }
 }
 
 .maincontent {

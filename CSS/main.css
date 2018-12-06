@@ -496,6 +496,11 @@ body {
   height: 100%;
   width: 100%;
 }
+@media screen and (max-width: 480px) {
+  .wrapper {
+    height: auto;
+  }
+}
 
 .maincontent {
   height: 100%;
