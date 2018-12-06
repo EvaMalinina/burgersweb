@@ -496,11 +496,6 @@ body {
   height: 100%;
   width: 100%;
 }
-@media screen and (max-width: 480px) {
-  .wrapper {
-    height: auto;
-  }
-}
 
 .maincontent {
   height: 100%;
@@ -1467,12 +1462,9 @@ p {
   .team__info {
     width: 100%;
     text-align: center;
-    padding: 13.75rem 13.125rem 0;
-  }
-}
-@media screen and (max-width: 480px) {
-  .team__info {
-    padding: 9.375rem 3.75rem 0 4.25rem;
+    padding: 0;
+    display: flex;
+    justify-content: center;
   }
 }
 
@@ -1866,7 +1858,8 @@ p {
 
 .player__video {
   height: 370px;
-  width: 41.25rem;
+  width: 100%;
+  max-width: 41.25rem;
 }
 
 .player__controls {
@@ -1874,7 +1867,8 @@ p {
   height: 35px;
   width: 41.125rem;
   background-color: #3e3e3e;
-  position: relative;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 .player__start {
@@ -1885,16 +1879,8 @@ p {
   padding: 0;
   border-right-width: 0;
   background: transparent;
-  position: absolute;
-  top: 5px;
-  left: 1.25rem;
   cursor: pointer;
   outline: none;
-}
-@media screen and (max-width: 480px) {
-  .player__start {
-    left: 3.75rem;
-  }
 }
 
 .player__start.paused {
@@ -1903,13 +1889,11 @@ p {
   border: none;
   border-left: 0.3125rem solid #626262;
   border-right: 0.3125rem solid #626262;
-  top: 10px;
 }
 
 #progress {
   width: 27.875rem;
   margin-left: 3.4375rem;
-  position: relative;
 }
 @media screen and (max-width: 480px) {
   #progress {
@@ -1923,6 +1907,8 @@ p {
   background: #999;
   margin: 0;
   padding: 0;
+  display: flex;
+  height: 4px;
 }
 @media screen and (max-width: 480px) {
   #total {
@@ -1934,31 +1920,28 @@ p {
   background: #ccc;
 }
 
-.player__playback {
-  position: absolute;
-  height: 4px;
-  /* width: 446px; */
-  background: #626262;
-  top: 15px;
-  /* left: 50px; */
+#current {
+  line-height: 0;
+  height: 100%;
+  display: flex;
+  position: relative;
 }
 
-.player__playback-button {
-  width: 0.625rem;
-  height: 0.625rem;
-  padding: 0;
-  border: none;
-  background: #626262;
+#current::before {
+  content: "";
+  height: 10px;
+  width: 10px;
   border-radius: 50%;
+  display: flex;
+  background-color: #626262;
   position: absolute;
   top: -3px;
+  transform: translateX(50%);
+  right: 0;
 }
 
 .player__volume {
   cursor: pointer;
-  position: absolute;
-  top: 4px;
-  right: 6.3125rem;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -1973,14 +1956,7 @@ p {
 }
 
 .player__volumeline {
-  position: absolute;
-  top: 5px;
-  left: 34.8125rem;
-}
-@media screen and (max-width: 480px) {
-  .player__volumeline {
-    left: 32.25rem;
-  }
+  display: flex;
 }
 
 #volume-bar {

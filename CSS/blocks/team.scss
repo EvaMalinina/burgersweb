@@ -16,11 +16,11 @@
   @include tablets {
     width: 100%;
     text-align: center;
-    padding: rem(220px) rem(210px) 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
   }
-  @include phones {
-    padding: rem(150px) rem(60px) 0 rem(68px);
-  }
+  
 }
 .team__desc {
   @include tablets {
