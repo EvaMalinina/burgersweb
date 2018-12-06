@@ -1893,12 +1893,10 @@ p {
 
 #progress {
   width: 27.875rem;
-  margin-left: 3.4375rem;
 }
 @media screen and (max-width: 480px) {
   #progress {
     width: 24.125rem;
-    margin-left: 5.3125rem;
   }
 }
 

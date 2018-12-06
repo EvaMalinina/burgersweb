@@ -51,11 +51,9 @@
 
 #progress {
   width: rem(446px);
-  margin-left: rem(55px);
 
   @include phones {
     width: rem(386px);
-    margin-left: rem(85px);
   }
 
 }
