@@ -430,6 +430,8 @@ video.addEventListener("timeupdate", function () {
   var progress = Math.floor(video.currentTime) / Math.floor(video.duration);
   console.log (video.currentTime, video.duration);
   controls.progress[0].style.width = Math.floor(progress * controls.total.width()) + "px";
+
+  console.log(Math.floor(progress * controls.total.width()) + "px");
 }, false);
 
 //событие клика на ползунок, событие перематывает выдео на то место где кликнули
