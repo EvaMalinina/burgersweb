@@ -88,6 +88,7 @@
     
   }
   @include phones {
+    margin-bottom: rem(0px);
     padding-top: rem(55px);
     width: auto;
   }
@@ -137,9 +138,11 @@
       z-index: 3;
 
       @include tablets {
-        right: -303px; //если вставить rem выпадашка сьезжает при сжимании
+        right: -295px; //если вставить rem выпадашка сьезжает при сжимании
       }
-      
+      @include phones {
+        right: -256px; //если вставить rem выпадашка сьезжает при сжимании
+      }
     }
   }
 
@@ -215,45 +218,17 @@
   }
 
   .dagger {
-    width: rem(20px);
+    width: 20px;
+    height: 20px;
     cursor: pointer;
     display: none;
-  
+    
+
     @include tablets {
       display: flex;
-      flex-direction: column;
-      margin-left: rem(30px);
+      padding-left: rem(20px);
+      padding-right: rem(20px);
     }
-    @include phones {
-      margin-left: rem(75px);
-    }
-  
-    &__item {
-      height: 4px;
-      margin-bottom: rem(14px);
-      border-radius: rem(4px);
-      background-color:$red;
-      
-  
-      &:last-child {
-        margin-bottom: 0;
-      }
-
-      &:nth-child(1) {
-        transform: rotate(45deg) translateY(12px);
-
-        @include phones {
-          transform: rotate(45deg) translateY(11px);
-        }
-      }
-      &:nth-child(2) {
-        transform: rotate(-45deg) translateY(-12px);
-        @include phones {
-          transform: rotate(-45deg) translateY(-11px);
-        }
-      }
-    }
-   
   }
 
 }
@@ -293,6 +268,10 @@
   color: white;
   line-height: 1.8;
   margin-bottom: rem(35px);
+
+  @include phones {
+    margin-bottom: rem(2px);
+  }
 }
 .burges-desc__price {
   display: flex;

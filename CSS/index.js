@@ -125,12 +125,8 @@ document.querySelector('#humburger').addEventListener('click', function() {
       if (arrow.classList.contains('slider__control')) {
         e.preventDefault();
 
-        console.log(arrow);
-
         var vector= arrow.dataset.vector;
         var active = slider.querySelector('.active');
-
-        console.log(active);
 
         if (vector === 'next') {
           if (active.nextElementSibling) {
@@ -252,24 +248,21 @@ document.querySelector('#humburger').addEventListener('click', function() {
   
 });
 
-
 }) ('#accordeonmenu');
 
 
 
-document.querySelector('#ingridients').addEventListener('click', function() {
-  var ingrid = document.querySelector('.burgers-pic__consist');
+const sliderlist = document.querySelector('#slider__list')
+sliderlist.onclick = function(e) {
+  var tap = e.target;
+  console.log(e.target);
+
+  if (tap.tagName!=='IMG') return ;
+  var ingrid = tap.closest('div.burgers-pic__consist');
  
   ingrid.classList.toggle('burgers-pic__consist_active');
-});
-document.querySelector('#dagger').addEventListener('click', function() {
-  var dagger = document.querySelector('.burgers-pic__drop');
-  console.log(dagger);
-  dagger.classList.remove('burgers-pic__consist_active');
-});
 
-
-
+};
 
 const myform = document.querySelector('#myform');
 // const send = document.querySelector('#send');
