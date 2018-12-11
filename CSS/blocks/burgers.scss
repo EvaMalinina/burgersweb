@@ -126,7 +126,7 @@
     left: rem(24px);
   }
   @include phones{
-    top: rem(-15px);
+    top: rem(0px);
     left: rem(20px);
   }
 
@@ -245,7 +245,7 @@
     left: auto;
   }
   @include phones{
-    top: rem(-15px);
+    top: rem(0px);
     right: rem(30px);
   }
 }
