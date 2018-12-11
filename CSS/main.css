@@ -703,6 +703,9 @@ p {
     line-height: 1.1;
   }
 }
+.section-title_bigmenu {
+  font-size: 1.5625rem;
+}
 .section-title_lh0 {
   line-height: 0;
 }
@@ -1687,6 +1690,13 @@ p {
   min-width: 100%;
   color: white;
 }
+
+.bigmenu__item {
+  display: flex;
+  justify-content: space-between;
+  width: 28.75rem;
+}
+
 .cross-block {
   width: 1.25rem;
   height: 1.25rem;

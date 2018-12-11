@@ -54,7 +54,9 @@
     line-height: 1.1;
     }
   }
-  
+   &_bigmenu {
+    font-size: rem(25px);
+  }
   &_lh0 {
     line-height: 0;
   }
