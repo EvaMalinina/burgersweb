@@ -104,7 +104,7 @@
     height: 100%;
   }
   @include phones{
-    width: 70%;
+    width: 60%;
   }
 }
 .burgers-pic__consist {
@@ -126,7 +126,7 @@
     left: rem(24px);
   }
   @include phones{
-    top: rem(-25px);
+    top: rem(-15px);
     left: rem(20px);
   }
 
@@ -245,7 +245,7 @@
     left: auto;
   }
   @include phones{
-    top: rem(-25px);
+    top: rem(-15px);
     right: rem(30px);
   }
 }

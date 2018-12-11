@@ -1246,7 +1246,7 @@ p {
 }
 @media screen and (max-width: 480px) {
   .burgers__item {
-    width: 70%;
+    width: 60%;
   }
 }
 
@@ -1272,7 +1272,7 @@ p {
 }
 @media screen and (max-width: 480px) {
   .burgers-pic__consist {
-    top: -1.5625rem;
+    top: -0.9375rem;
     left: 1.25rem;
   }
 }
@@ -1387,7 +1387,7 @@ p {
 }
 @media screen and (max-width: 480px) {
   .burgers-pic__kkal {
-    top: -1.5625rem;
+    top: -0.9375rem;
     right: 1.875rem;
   }
 }
@@ -1695,6 +1695,11 @@ p {
   display: flex;
   justify-content: space-between;
   width: 28.75rem;
+}
+@media screen and (max-width: 480px) {
+  .bigmenu__item {
+    width: 270px;
+  }
 }
 
 .cross-block {

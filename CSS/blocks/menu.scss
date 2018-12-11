@@ -118,6 +118,10 @@
   display: flex;
   justify-content: space-between;
   width: rem(460px);
+
+  @include phones {
+    width: 270px;
+  }
 }
 .cross-block {
   width: rem(20px);
