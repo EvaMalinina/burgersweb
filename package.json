@@ -3,11 +3,21 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "cssnano": "^4.1.7",
+    "stylelint": "^9.9.0"
+  },
   "devDependencies": {
+    "gulp": "^4.0.0",
+    "gulp-group-css-media-queries": "^1.2.2",
+    "gulp-postcss": "^8.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.4",
+    "node-sass": "^4.11.0",
     "sass": "^1.14.3"
   },
   "scripts": {
+    "start": "gulp",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
